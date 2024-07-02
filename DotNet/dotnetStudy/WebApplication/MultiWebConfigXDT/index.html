@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <pre>
+当我们最后发布(web项目上,右键点击发布)成功后,web.config的数据库连接字符串就会变成web.Release.config中设置的信息.
+
+其中 xdt:Transform="SetAttributes" xdt:Locator="Match(name)"这两个信息非常重要:
+	- xdt:Transform 指明 转换什么内容,取值常用的有SetAttributes和Replace: SetAttributes（**）,更改那个属性（不指定属性名字,就全部属性替换,跟Replace一样的功能）;或者Replace全部替换
+	- xdt:Locator 指明 去转换谁，取值常用的为Match(name),就是按照name名称进行匹配.
+    </pre>
+</body>
+</html>

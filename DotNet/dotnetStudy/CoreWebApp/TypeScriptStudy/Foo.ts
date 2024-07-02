@@ -1,0 +1,5 @@
+﻿class Foo {
+    constructor() {
+            
+    }
+}
