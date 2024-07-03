@@ -5,8 +5,4 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="设计模式\AbstractFactory抽象工厂\" />
-  </ItemGroup>
-
 </Project>
