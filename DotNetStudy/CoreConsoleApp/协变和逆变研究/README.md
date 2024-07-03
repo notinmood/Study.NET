@@ -6,7 +6,7 @@
 
 - 协变 Covariant
 - 逆变 Contravariant
-- 不变 invariant
+- 不变 Invariant
 
 ## 详细说明
 泛型委托的实例化其实分为两个步骤：

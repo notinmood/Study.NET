@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="设计模式\AbstractFactory抽象工厂\" />
+    <Folder Include="设计模式\Bridge桥梁模式\" />
+  </ItemGroup>
 
 </Project>

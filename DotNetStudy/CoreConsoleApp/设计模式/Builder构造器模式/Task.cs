@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreConsoleApp.BuilderStudy
+namespace CoreConsoleApp.设计模式.Builder构造器模式
 {
 
     // https://www.cnblogs.com/javastack/p/14704723.html
