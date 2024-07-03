@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="设计模式\AbstractFactory抽象工厂\" />
-    <Folder Include="设计模式\Bridge桥梁模式\" />
   </ItemGroup>
 
 </Project>
