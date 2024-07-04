@@ -2,7 +2,7 @@
 {
     public class Client
     {
-        public static void Main(string[] args)
+        public static void Index()
         {
             //创建装机工程师对象
             ComputerEngineer engineer = new ComputerEngineer();
