@@ -16,24 +16,24 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          */
         private StringBuilder buffer = new StringBuilder();
 
-        public void buildBody(Dictionary<string, Collection<ExportDataModel>> mapData)
+        public void buildBody(Dictionary<string, Collection<DataModel>> mapData)
         {
             foreach (string tblName in mapData.Keys)
             {
                 //先拼接表名称
                 buffer.Append(tblName + "\n");
                 //然后循环拼接具体数据
-                foreach (ExportDataModel edm in mapData[tblName])
+                foreach (DataModel edm in mapData[tblName])
                 {
                     buffer.Append(edm.getProductId() + "," + edm.getPrice() + "," + edm.getAmount() + "\n");
                 }
             }
         }
-        public void buildFooter(ExportFooterModel efm)
+        public void buildFooter(FooterModel efm)
         {
             buffer.Append(efm.getExportUser());
         }
-        public void buildHeader(ExportHeaderModel ehm)
+        public void buildHeader(HeaderModel ehm)
         {
             buffer.Append(ehm.getDepId() + "," + ehm.getExportDate() + "\n");
         }
@@ -42,5 +42,4 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
             return buffer;
         }
     }
-
 }

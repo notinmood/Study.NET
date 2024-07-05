@@ -5,7 +5,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.Biz
     /**
    * 描述输出到文件尾的内容的对象
    */
-    public class ExportFooterModel
+    public class FooterModel
     {
         /**
          * 输出人

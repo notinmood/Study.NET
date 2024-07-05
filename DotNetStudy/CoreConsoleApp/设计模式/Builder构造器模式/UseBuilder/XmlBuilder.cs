@@ -16,7 +16,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          */
         private StringBuilder buffer = new StringBuilder();
 
-        public void buildBody(Dictionary<String, Collection<ExportDataModel>> mapData)
+        public void buildBody(Dictionary<String, Collection<DataModel>> mapData)
         {
             buffer.Append("  <Body>\n");
             foreach (String tblName in mapData.Keys)
@@ -24,7 +24,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
                 //先拼接表名称
                 buffer.Append("    <Datas TableName=\"" + tblName + "\">\n");
                 //然后循环拼接具体数据
-                foreach (ExportDataModel edm in mapData[tblName])
+                foreach (DataModel edm in mapData[tblName])
                 {
                     buffer.Append("      <Data>\n");
                     buffer.Append("        <ProductId>" + edm.getProductId() + "</ProductId>\n");
@@ -36,14 +36,14 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
             }
             buffer.Append("  </Body>\n");
         }
-        public void buildFooter(ExportFooterModel efm)
+        public void buildFooter(FooterModel efm)
         {
             buffer.Append("  <Footer>\n");
             buffer.Append("    <ExportUser>" + efm.getExportUser() + "</ExportUser>\n");
             buffer.Append("  </Footer>\n");
             buffer.Append("</Report>\n");
         }
-        public void buildHeader(ExportHeaderModel ehm)
+        public void buildHeader(HeaderModel ehm)
         {
             buffer.Append("<?xml version='1.0' encoding='gb2312'?>\n");
             buffer.Append("<Report>\n");

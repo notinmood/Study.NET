@@ -28,7 +28,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          * @param mapData 数据的内容
          * @param efm 文件尾的内容
          */
-        public void construct(ExportHeaderModel ehm, Dictionary<string, Collection<ExportDataModel>> mapData, ExportFooterModel efm)
+        public void construct(HeaderModel ehm, Dictionary<string, Collection<DataModel>> mapData, FooterModel efm)
         {
             //1：先构建Header
             builder.buildHeader(ehm);

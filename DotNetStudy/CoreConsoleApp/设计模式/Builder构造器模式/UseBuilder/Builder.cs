@@ -14,17 +14,17 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          * 构建输出文件的Header部分
          * @param ehm 文件头的内容
          */
-        public void buildHeader(ExportHeaderModel ehm);
+        public void buildHeader(HeaderModel ehm);
         /**
          * 构建输出文件的Body部分 
          * @param mapData 要输出的数据的内容
          */
-        public void buildBody(Dictionary<string, Collection<ExportDataModel>> mapData);
+        public void buildBody(Dictionary<string, Collection<DataModel>> mapData);
         /**
          * 构建输出文件的Footer部分
          * @param efm 文件尾的内容
          */
-        public void buildFooter(ExportFooterModel efm);
+        public void buildFooter(FooterModel efm);
     }
 
 }

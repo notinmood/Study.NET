@@ -9,7 +9,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.Biz
     /**
    * 描述输出到文件头的内容的对象
    */
-    public class ExportHeaderModel
+    public class HeaderModel
     {
         /**
          * 分公司或门市点编号

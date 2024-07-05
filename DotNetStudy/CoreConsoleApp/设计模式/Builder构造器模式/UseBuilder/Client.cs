@@ -10,19 +10,19 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
         public static void Index()
         {
             //准备测试数据
-            ExportHeaderModel ehm = new ExportHeaderModel();
+            HeaderModel ehm = new HeaderModel();
             ehm.setDepId("一分公司");
             ehm.setExportDate("2010-05-18");
 
-            Dictionary<String, Collection<ExportDataModel>> mapData = new HashMap<String, Collection<ExportDataModel>>();
-            Collection<ExportDataModel> col = new Collection<ExportDataModel>();
+            Dictionary<string, Collection<DataModel>> mapData = [];
+            Collection<DataModel> col = [];
 
-            ExportDataModel edm1 = new ExportDataModel();
+            DataModel edm1 = new DataModel();
             edm1.setProductId("产品001号");
             edm1.setPrice(100);
             edm1.setAmount(80);
 
-            ExportDataModel edm2 = new ExportDataModel();
+            DataModel edm2 = new DataModel();
             edm2.setProductId("产品002号");
             edm2.setPrice(99);
             edm2.setAmount(55);
@@ -31,7 +31,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
             col.Add(edm2);
             mapData.Add("销售记录表", col);
 
-            ExportFooterModel efm = new ExportFooterModel();
+            FooterModel efm = new FooterModel();
             efm.setExportUser("张三");
 
             //测试输出到文本文件

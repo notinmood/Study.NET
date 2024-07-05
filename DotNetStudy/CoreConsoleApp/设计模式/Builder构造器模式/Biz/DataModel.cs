@@ -5,7 +5,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.Biz
     /**
    * 描述输出数据的对象
    */
-    public class ExportDataModel
+    public class DataModel
     {
         /**
          * 产品编号

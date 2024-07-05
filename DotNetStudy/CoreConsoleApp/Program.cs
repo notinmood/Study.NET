@@ -1,9 +1,11 @@
-﻿using System;
-using CoreConsoleApp.协变和逆变研究;
-using FaNo= CoreConsoleApp.设计模式.Facade外观模式.NoPattern;
-using FaUse = CoreConsoleApp.设计模式.Facade外观模式.UsePattern;
-using RF= CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射工厂;
+﻿// 文件名：Program.cs
+// 版权：山东润拓{currentYear}
+
+using System;
 using BdNo = CoreConsoleApp.设计模式.Builder构造器模式.NoPattern;
+using FaNo = CoreConsoleApp.设计模式.Facade外观模式.NoPattern;
+using FaUse = CoreConsoleApp.设计模式.Facade外观模式.UsePattern;
+using RF = CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射工厂;
 
 namespace CoreConsoleApp
 {
@@ -34,6 +36,8 @@ namespace CoreConsoleApp
 
             //4. 调用创建者模式的逻辑
             BdNo.Client.Index();
+
+            
         }
     }
 }

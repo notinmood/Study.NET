@@ -17,7 +17,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
          * @param mapData 数据的内容
          * @param efm 文件尾的内容
          */
-        public void export(ExportHeaderModel ehm, Dictionary<string, Collection<ExportDataModel>> mapData, ExportFooterModel efm)
+        public void export(HeaderModel ehm, Dictionary<string, Collection<DataModel>> mapData, FooterModel efm)
         {
             //用来记录最终输出的文件内容
             StringBuilder buffer = new StringBuilder();
@@ -29,7 +29,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
                 //先拼接表名称
                 buffer.Append(tblName + "\n");
                 //然后循环拼接具体数据
-                foreach (ExportDataModel edm in mapData[tblName])
+                foreach (DataModel edm in mapData[tblName])
                 {
                     buffer.Append(edm.getProductId() + "," + edm.getPrice() + "," + edm.getAmount() + "\n");
                 }
