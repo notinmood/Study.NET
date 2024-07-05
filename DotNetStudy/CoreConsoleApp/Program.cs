@@ -6,7 +6,8 @@ using BdNo = CoreConsoleApp.设计模式.Builder构造器模式.NoPattern;
 using FaNo = CoreConsoleApp.设计模式.Facade外观模式.NoPattern;
 using FaUse = CoreConsoleApp.设计模式.Facade外观模式.UsePattern;
 using RF = CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射工厂;
-using PSC = CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.标准实现方式;
+using PSO = CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅对象的方式;
+using FSM = CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅方法的方式;
 
 namespace CoreConsoleApp
 {
@@ -39,7 +40,9 @@ namespace CoreConsoleApp
             BdNo.Client.Index();
 
             //5. 调用发布订阅模式的逻辑
-            PSC.Client.Index();
+            PSO.Client.Index();
+
+            PSO.Client.Index();
         }
     }
 }

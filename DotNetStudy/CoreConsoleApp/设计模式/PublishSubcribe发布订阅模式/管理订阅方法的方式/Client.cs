@@ -6,19 +6,19 @@
  * @company: HiLand & RainyTop
  */
 
-namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.标准实现方式
+namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅方法的方式
 {
     internal class Client
     {
         public static void Index()
         {
             // 使用示例
-            MessageBroker broker = new MessageBroker();
-            Publisher publisher = new Publisher(broker);
+            MessageBroker<string> broker = new MessageBroker<string>();
+            Publisher<string> publisher = new Publisher<string>(broker);
 
-            Subscriber subscriber1 = new Subscriber("Alice", broker);
-            Subscriber subscriber2 = new Subscriber("Bob", broker);
-            Subscriber subscriber3 = new Subscriber("Ajax", broker);
+            Subscriber<string> subscriber1 = new Subscriber<string>("Alice", broker);
+            Subscriber<string> subscriber2 = new Subscriber<string>("Bob", broker);
+            Subscriber<string> subscriber3 = new Subscriber<string>("Ajax", broker);
 
             subscriber1.Subscribe("news");
             subscriber2.Subscribe("weather");

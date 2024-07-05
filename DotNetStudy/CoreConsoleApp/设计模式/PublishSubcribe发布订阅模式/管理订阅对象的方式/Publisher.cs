@@ -6,9 +6,9 @@
  * @company: HiLand & RainyTop
  */
 
-namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.标准实现方式
+namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅对象的方式
 {
-    internal class Publisher
+    internal class Publisher : IPublish
     {
         public Publisher(MessageBroker broker)
         {
@@ -19,7 +19,7 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.标准�
 
         public void Publish<T>(string topic, T message)
         {
-            this.broker.publish(topic, message);
+            this.broker.Publish(topic, message);
         }
     }
 }
