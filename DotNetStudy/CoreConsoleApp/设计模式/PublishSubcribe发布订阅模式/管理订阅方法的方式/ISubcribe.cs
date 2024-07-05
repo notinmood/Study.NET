@@ -2,7 +2,6 @@
 {
     internal interface ISubcribe<T>
     {
-        void Subscribe(string topic);
         void Execute(T data);
     }
 }

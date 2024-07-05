@@ -20,9 +20,10 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理�
             Subscriber<string> subscriber2 = new Subscriber<string>("Bob", broker);
             Subscriber<string> subscriber3 = new Subscriber<string>("Ajax", broker);
 
-            subscriber1.Subscribe("news");
-            subscriber2.Subscribe("weather");
-            subscriber3.Subscribe("weather");
+            //客户端完成订阅过程。
+            broker.Subscribe("news", subscriber1.Execute);
+            broker.Subscribe("weather", subscriber2.Execute);
+            broker.Subscribe("weather", subscriber3.Execute);
 
             publisher.Publish("news", "Breaking news: the sky is blue");
             publisher.Publish("weather", "It will be sunny tomorrow");

@@ -22,11 +22,6 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理�
             this.name = name;
         }
 
-        public void Subscribe(string topic)
-        {
-            this.broker.Subscribe(topic, this);
-        }
-
         public void Execute<T>(T data)
         {
             Console.WriteLine("我的动作执行中。。。");
