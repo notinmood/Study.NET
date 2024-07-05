@@ -27,4 +27,5 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.使用�
             MyEvent?.Invoke(message);
         }
     }
+
 }
