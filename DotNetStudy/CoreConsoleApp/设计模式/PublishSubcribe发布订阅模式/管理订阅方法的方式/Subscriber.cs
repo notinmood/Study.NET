@@ -12,19 +12,13 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理�
 {
     internal class Subscriber<T> : ISubcribe<T>
     {
-        private readonly MessageBroker<T> broker;
         private readonly string name;
 
-        public Subscriber(string name, MessageBroker<T> broker)
+        public Subscriber(string name)
         {
-            this.broker = broker;
             this.name = name;
         }
 
-        public void Subscribe(string topic)
-        {
-            this.broker.Subscribe(topic, this.Execute);
-        }
 
         public void Execute(T data)
         {

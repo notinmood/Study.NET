@@ -16,13 +16,16 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理�
             MessageBroker<string> broker = new MessageBroker<string>();
             Publisher<string> publisher = new Publisher<string>(broker);
 
-            Subscriber<string> subscriber1 = new Subscriber<string>("Alice", broker);
-            Subscriber<string> subscriber2 = new Subscriber<string>("Bob", broker);
-            Subscriber<string> subscriber3 = new Subscriber<string>("Ajax", broker);
+            Subscriber<string> subscriber1 = new Subscriber<string>("Alice");
+            Subscriber<string> subscriber2 = new Subscriber<string>("Bob");
+            Subscriber<string> subscriber3 = new Subscriber<string>("Ajax");
 
-            subscriber1.Subscribe("news");
-            subscriber2.Subscribe("weather");
-            subscriber3.Subscribe("weather");
+            //客户端完成订阅过程。
+            broker.Subscribe("news", subscriber1.Execute);
+            broker.Subscribe("weather", subscriber2.Execute);
+            broker.Subscribe("weather", subscriber3.Execute);
+
+            //broker.Publish()
 
             publisher.Publish("news", "Breaking news: the sky is blue");
             publisher.Publish("weather", "It will be sunny tomorrow");

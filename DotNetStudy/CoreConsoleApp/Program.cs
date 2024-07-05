@@ -42,7 +42,7 @@ namespace CoreConsoleApp
             //5. 调用发布订阅模式的逻辑
             PSO.Client.Index();
 
-            PSO.Client.Index();
+            FSM.Client.Index();
         }
     }
 }
