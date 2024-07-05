@@ -18,16 +18,16 @@ namespace CoreConsoleApp.设计模式.Observer观察者模式.拉模式
         /**
          * 用来保存注册的观察者对象，也就是报纸的订阅者
          */
-        private List<Observer> readers = new List<Observer>();
+        private List<IObserver> observers = [];
 
         /**
          * 报纸的读者需要先向报社订阅，先要注册
          * @param reader 报纸的读者
          * @return 是否注册成功
          */
-        public void attach(Observer reader)
+        public void Attach(IObserver observer)
         {
-            readers.Add(reader);
+            observers.Add(observer);
         }
 
         /**
@@ -35,20 +35,20 @@ namespace CoreConsoleApp.设计模式.Observer观察者模式.拉模式
          * @param reader 报纸的读者
          * @return 是否取消成功
          */
-        public void detach(Observer reader)
+        public void Detach(IObserver observer)
         {
-            readers.Remove(reader);
+            observers.Remove(observer);
         }
 
         /**
          * 当每期报纸印刷出来后，就要迅速主动的被送到读者的手中，
          * 相当于通知读者，让他们知道
          */
-        protected void notifyObservers()
+        protected void NotifyObservers()
         {
-            foreach (Observer reader in readers)
+            foreach (IObserver observer in observers)
             {
-                reader.update(this);
+                observer.Update(this);
             }
         }
     }

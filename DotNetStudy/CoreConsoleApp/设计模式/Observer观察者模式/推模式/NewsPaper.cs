@@ -15,11 +15,11 @@ namespace CoreConsoleApp.设计模式.Observer观察者模式.推模式
         {
             return content;
         }
-        public void setContent(string content)
+        public void SetContent(string content)
         {
             this.content = content;
             //内容有了，说明又出报纸了，那就通知所有的读者
-            notifyObservers(content);
+            NotifyObservers(content);
         }
     }
 }

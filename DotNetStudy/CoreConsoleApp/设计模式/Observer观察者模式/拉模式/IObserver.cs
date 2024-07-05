@@ -11,13 +11,13 @@ namespace CoreConsoleApp.设计模式.Observer观察者模式.拉模式
     /**
      * 观察者，比如报纸的读者
      */
-    public interface Observer
+    public interface IObserver
     {
         /**
          * 被通知的方法
          * @param subject 具体的目标对象，可以获取报纸的内容
          */
-        public void update(Subject subject);
+        public void Update(Subject subject);
     }
 
 }
