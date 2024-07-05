@@ -25,10 +25,6 @@ namespace CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理�
             broker.Subscribe("weather", subscriber2.Execute);
             broker.Subscribe("weather", subscriber3.Execute);
 
-            subscriber1.Subscribe("news");
-            subscriber2.Subscribe("weather");
-            subscriber3.Subscribe("weather");
-
             publisher.Publish("news", "Breaking news: the sky is blue");
             publisher.Publish("weather", "It will be sunny tomorrow");
         }
