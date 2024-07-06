@@ -9,6 +9,7 @@ using RF = CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射�
 using PSO = CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅对象的方式;
 using FSM = CoreConsoleApp.设计模式.PublishSubcribe发布订阅模式.管理订阅方法的方式;
 using EB = CoreConsoleApp.事件研究._3.框架标准事件;
+using ES = CoreConsoleApp.事件研究._4.基于事件的订阅退订的例子;
 
 namespace CoreConsoleApp
 {
@@ -47,6 +48,7 @@ namespace CoreConsoleApp
 
             //6. 调用事件模型的逻辑
             EB.BetterClient.Index();
+            ES.Client.Index();
         }
     }
 }
