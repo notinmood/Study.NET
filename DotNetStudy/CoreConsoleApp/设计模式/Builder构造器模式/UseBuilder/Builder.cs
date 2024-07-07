@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text;
 using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
 
 namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
@@ -25,6 +26,8 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          * @param efm 文件尾的内容
          */
         public void buildFooter(FooterModel efm);
+
+        public StringBuilder getResult();
     }
 
 }

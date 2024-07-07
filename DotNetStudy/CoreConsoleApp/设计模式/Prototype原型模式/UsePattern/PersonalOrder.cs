@@ -1,8 +1,4 @@
-﻿
-
-using System.Reflection.Metadata.Ecma335;
-
-/**
+﻿/**
  * @file   : PersonalOrder.cs
  * @date   : 2024/7/7 17:48:33
  * @mail   : 9727005@qq.com
@@ -57,6 +53,7 @@ namespace CoreConsoleApp.设计模式.Prototype原型模式.UsePattern
         {
             return "本个人订单的订购人是=" + this.customerName + "，订购产品是=" + this.productId + "，订购数量为=" + this.orderProductNum;
         }
+
 
 
         public IOrder Clone()

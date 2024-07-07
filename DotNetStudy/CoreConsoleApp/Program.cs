@@ -15,9 +15,11 @@ using SN = CoreConsoleApp.设计模式.State状态模式.NoPattern;
 using SU = CoreConsoleApp.设计模式.State状态模式.UsePattern;
 using SS = CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例;
 using PU = CoreConsoleApp.设计模式.Prototype原型模式.UsePattern;
+using STU = CoreConsoleApp.设计模式.Strategy策略模式.UsePattern;
 
 namespace CoreConsoleApp
 {
+
     /// <summary>
     /// 
     /// </summary>
@@ -63,6 +65,9 @@ namespace CoreConsoleApp
 
             //8. 调用原型模式的逻辑
             PU.Client.Index();
+
+            //9. 调用策略模式的逻辑
+            STU.Client.Index();
         }
     }
 }
