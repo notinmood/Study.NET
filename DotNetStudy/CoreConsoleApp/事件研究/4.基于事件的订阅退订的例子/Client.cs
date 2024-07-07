@@ -55,7 +55,7 @@ namespace CoreConsoleApp.事件研究._4.基于事件的订阅退订的例子
                 cat.UseMiaoEvent();
             }
 
-            Console.Read();
+            //Console.Read();
 
         }
     }

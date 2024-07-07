@@ -1,6 +1,6 @@
 ﻿# 说明
 
-> 参考 https://www.cnblogs.com/lemontea/archive/2013/02/17/2915065.html
+>
 ## 概述
 只有泛型委托和泛型接口才有协变和逆变的出现。如果是泛型类型中，只有“不变”。
 
@@ -18,7 +18,7 @@
 * 协变和逆变出现在委托实例化的过程中，底层必然也遵循李氏替换原理，但逆变在表面上反常；
 
 ## 特别注意
-```JavaScript
+```cs
 public class Sub<T> : Base<T>
 {
 }
@@ -33,3 +33,7 @@ public class Sub<T> : Base<T>
 1. 只有 T 相同，才有继承派生关系；
 2. 当T 不同的时候，两者间没有关系。
 即，类型 `Base<Object>` 和 `Sub<string>`，或者 `Base<string>` 和 `Sub<object>` 之间没有任何继承派生关系
+
+
+## ▌参考资料：
+- https://www.cnblogs.com/lemontea/archive/2013/02/17/2915065.html
