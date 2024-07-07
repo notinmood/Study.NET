@@ -13,8 +13,8 @@ using System;
 namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
 {
     /**
- * 处理审核结束的类
- */
+     * 处理审核结束的类
+     */
     public class AuditOverState : LeaveRequestState
     {
         public void doWork(StateMachine request)
@@ -26,5 +26,4 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
             Console.WriteLine(lrm.getUser() + "，你的请假申请已经审核结束，结果是：" + lrm.getResult());
         }
     }
-
 }

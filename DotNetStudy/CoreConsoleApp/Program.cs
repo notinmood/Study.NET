@@ -14,6 +14,7 @@ using SB = CoreConsoleApp.设计模式.State状态模式.UsePatternBetter;
 using SN = CoreConsoleApp.设计模式.State状态模式.NoPattern;
 using SU = CoreConsoleApp.设计模式.State状态模式.UsePattern;
 using SS = CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例;
+using PU = CoreConsoleApp.设计模式.Prototype原型模式.UsePattern;
 
 namespace CoreConsoleApp
 {
@@ -59,6 +60,9 @@ namespace CoreConsoleApp
             SU.Client.Index();
             SB.Client.Index();
             SS.Client.Index();
+
+            //8. 调用原型模式的逻辑
+            PU.Client.Index();
         }
     }
 }
