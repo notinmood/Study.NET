@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
 {
-    public interface LeaveRequestState : State
+    public interface ILeaveRequestState : IState
     {
         //这里可以扩展跟自己流程相关的处理
     }

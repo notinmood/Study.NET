@@ -15,7 +15,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
     /**
      * 处理审核结束的类
      */
-    public class AuditOverState : LeaveRequestState
+    public class AuditOverState : ILeaveRequestState
     {
         public void doWork(StateMachine request)
         {

@@ -1,12 +1,4 @@
-﻿
-
-using CoreConsoleApp.设计模式.State状态模式.UsePattern;
-
-
-
-using System.Net.NetworkInformation;
-
-/**
+﻿/**
  * @file   : Context.cs
  * @date   : 2024/7/7 8:54:29
  * @mail   : 9727005@qq.com
@@ -20,10 +12,10 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
     {
         private readonly VoteManager vm;
 
-        /**
-         * 持有状态处理对象
-         */
-        private IVoteState state = null;
+        ///**
+        // * 持有状态处理对象
+        // */
+        //private IVoteState state = null;
 
         public Context(VoteManager vm)
         {

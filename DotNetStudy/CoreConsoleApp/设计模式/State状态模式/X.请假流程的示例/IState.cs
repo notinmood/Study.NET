@@ -11,7 +11,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
     /**
   * 公共状态接口
   */
-    public interface State
+    public interface IState
     {
         /**
          * 执行状态对应的功能处理

@@ -2,7 +2,8 @@
 // 版权：山东润拓{currentYear}
 
 using System;
-using BdNo = CoreConsoleApp.设计模式.Builder构造器模式.NoPattern;
+using BN = CoreConsoleApp.设计模式.Builder构造器模式.NoPattern;
+using BSU = CoreConsoleApp.设计模式.Builder构造器模式.X.对象构建示例.UsePattern;
 using EB = CoreConsoleApp.事件研究._3.框架标准事件;
 using ES = CoreConsoleApp.事件研究._4.基于事件的订阅退订的例子;
 using FaNo = CoreConsoleApp.设计模式.Facade外观模式.NoPattern;
@@ -46,11 +47,11 @@ namespace CoreConsoleApp
             RF.Client.Index();
 
             //4. 调用创建者模式的逻辑
-            BdNo.Client.Index();
+            BN.Client.Index();
+            BSU.Client.Index();
 
             //5. 调用发布订阅模式的逻辑
             PSO.Client.Index();
-
             FSM.Client.Index();
 
             //6. 调用事件模型的逻辑

@@ -15,7 +15,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
     /**
      * 处理项目经理的审核，处理后可能对应部门经理审核、审核结束之中的一种
      */
-    public class ProjectManagerState : LeaveRequestState
+    public class ProjectManagerState : ILeaveRequestState
     {
         public void doWork(StateMachine request)
         {

@@ -7,10 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
 {
@@ -23,7 +19,8 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
         /**
          * 持有一个状态对象
          */
-        private State state = null;
+        private IState state = null;
+
         /**
          * 包含流程处理需要的业务数据对象，不知道具体类型,为了简单，不去使用泛型，
          * 用Object，反正只是传递到具体的状态对象里面
@@ -39,11 +36,11 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
             this.state.doWork(this);
         }
 
-        public State getState()
+        public IState getState()
         {
             return state;
         }
-        public void setState(State state)
+        public void setState(IState state)
         {
             this.state = state;
         }
