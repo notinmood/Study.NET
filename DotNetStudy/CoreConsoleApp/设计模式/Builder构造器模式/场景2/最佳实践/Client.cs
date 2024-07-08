@@ -5,8 +5,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
-
-namespace CoreConsoleApp.设计模式.Builder构造器模式.最佳实践
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景2.最佳实践
 {
     internal class Client
     {

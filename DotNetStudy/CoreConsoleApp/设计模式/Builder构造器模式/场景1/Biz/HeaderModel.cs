@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.Biz
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz
 {
     /**
    * 描述输出到文件头的内容的对象

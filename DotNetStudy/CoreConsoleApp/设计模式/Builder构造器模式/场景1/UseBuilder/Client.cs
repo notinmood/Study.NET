@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
 {
     public class Client
     {

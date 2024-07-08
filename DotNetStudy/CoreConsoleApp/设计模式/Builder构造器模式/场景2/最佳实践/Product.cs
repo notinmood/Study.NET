@@ -5,8 +5,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
-
-namespace CoreConsoleApp.设计模式.Builder构造器模式.最佳实践
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景2.最佳实践
 {
     public class Product
     {
@@ -22,7 +21,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.最佳实践
         // 内部类，作为建造者
         public class Builder
         {
-            private readonly Product product = new Product();
+            private static readonly Product product = new Product();
 
             public Builder SetPartA(string partA)
             {

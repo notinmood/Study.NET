@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.NoPattern
 {
     /**
      * 导出数据到文本文件的对象
@@ -24,7 +24,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
             //1：先来拼接文件头的内容
             buffer.Append(ehm.getDepId() + "," + ehm.getExportDate() + "\n");
             //2：接着来拼接文件体的内容
-            foreach (String tblName in mapData.Keys)
+            foreach (string tblName in mapData.Keys)
             {
                 //先拼接表名称
                 buffer.Append(tblName + "\n");

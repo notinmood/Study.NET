@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
 {
     /**
    * 指导者，指导使用生成器的接口来构建输出的文件的对象

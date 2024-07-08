@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
 {
     /**
    * 实现导出数据到XML文件的的生成器对象
@@ -16,10 +16,10 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
          */
         private StringBuilder buffer = new StringBuilder();
 
-        public void buildBody(Dictionary<String, Collection<DataModel>> mapData)
+        public void buildBody(Dictionary<string, Collection<DataModel>> mapData)
         {
             buffer.Append("  <Body>\n");
-            foreach (String tblName in mapData.Keys)
+            foreach (string tblName in mapData.Keys)
             {
                 //先拼接表名称
                 buffer.Append("    <Datas TableName=\"" + tblName + "\">\n");

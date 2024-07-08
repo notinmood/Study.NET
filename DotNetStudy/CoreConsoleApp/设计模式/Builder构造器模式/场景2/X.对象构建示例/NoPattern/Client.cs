@@ -8,7 +8,7 @@
 
 using System;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.X.对象构建示例.NoPattern
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景2.X.对象构建示例.NoPattern
 {
     internal class Client
     {

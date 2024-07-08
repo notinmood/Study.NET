@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
 {
     /**
    * 生成器接口，定义创建一个输出文件对象所需的各个部件的操作

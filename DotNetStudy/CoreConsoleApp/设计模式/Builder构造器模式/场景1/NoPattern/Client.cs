@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.NoPattern
 {
     public class Client
     {
@@ -14,7 +14,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.NoPattern
             ehm.setDepId("一分公司");
             ehm.setExportDate("2010-05-18");
 
-            Dictionary<String, Collection<DataModel>> mapData = new Dictionary<String, Collection<DataModel>>();
+            Dictionary<string, Collection<DataModel>> mapData = new Dictionary<string, Collection<DataModel>>();
             Collection<DataModel> col = new Collection<DataModel>();
 
             DataModel edm1 = new();

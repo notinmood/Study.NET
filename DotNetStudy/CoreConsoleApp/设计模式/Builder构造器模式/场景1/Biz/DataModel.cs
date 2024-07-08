@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.Biz
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz
 {
     /**
    * 描述输出数据的对象

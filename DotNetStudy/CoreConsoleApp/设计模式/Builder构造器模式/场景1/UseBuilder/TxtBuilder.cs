@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using CoreConsoleApp.设计模式.Builder构造器模式.Biz;
+using CoreConsoleApp.设计模式.Builder构造器模式.场景1.Biz;
 
-namespace CoreConsoleApp.设计模式.Builder构造器模式.UseBuilder
+namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
 {
     /**
     * 实现导出数据到文本文件的的生成器对象
