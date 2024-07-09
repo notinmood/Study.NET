@@ -9,14 +9,14 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
     /**
    * 实现导出数据到XML文件的的生成器对象
    */
-    public class XmlBuilder : Builder
+    public class XmlBuilder : IBuilder
     {
         /**
          * 用来记录构建的文件的内容，相当于产品
          */
         private StringBuilder buffer = new StringBuilder();
 
-        public void buildBody(Dictionary<string, Collection<DataModel>> mapData)
+        public void BuildBody(Dictionary<string, Collection<DataModel>> mapData)
         {
             buffer.Append("  <Body>\n");
             foreach (string tblName in mapData.Keys)
@@ -36,14 +36,14 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
             }
             buffer.Append("  </Body>\n");
         }
-        public void buildFooter(FooterModel efm)
+        public void BuildFooter(FooterModel efm)
         {
             buffer.Append("  <Footer>\n");
             buffer.Append("    <ExportUser>" + efm.getExportUser() + "</ExportUser>\n");
             buffer.Append("  </Footer>\n");
             buffer.Append("</Report>\n");
         }
-        public void buildHeader(HeaderModel ehm)
+        public void BuildHeader(HeaderModel ehm)
         {
             buffer.Append("<?xml version='1.0' encoding='gb2312'?>\n");
             buffer.Append("<Report>\n");
@@ -52,7 +52,7 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
             buffer.Append("    <ExportDate>" + ehm.getExportDate() + "</ExportDate>\n");
             buffer.Append("  </Header>\n");
         }
-        public StringBuilder getResult()
+        public StringBuilder GetResult()
         {
             return buffer;
         }

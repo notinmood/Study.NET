@@ -15,7 +15,7 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
  */
     public class ProjectManager : Handler
     {
-        public override Object handleRequest(RequestModel rm)
+        public override Object HandleRequest(RequestModel rm)
         {
             if (FeeRequestModel.FEE_TYPE == (rm.getType()))
             {
@@ -25,7 +25,7 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
             else
             {
                 //其它的事由，项目经理暂时不想处理
-                return base.handleRequest(rm);
+                return base.HandleRequest(rm);
             }
         }
         private Object handleFeeRequest(RequestModel rm)
@@ -53,7 +53,7 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
                 //超过500，继续传递给级别更高的人处理
                 if (this.successor != null)
                 {
-                    return successor.handleRequest(rm);
+                    return successor.HandleRequest(rm);
                 }
             }
             return str;

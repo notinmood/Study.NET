@@ -38,15 +38,15 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
             TxtBuilder txtBuilder = new TxtBuilder();
             //创建指导者对象
             Director director = new Director(txtBuilder);
-            director.construct(ehm, mapData, efm);
+            director.Construct(ehm, mapData, efm);
             //把要输出的内容输出到控制台看看
-            Console.WriteLine("输出到文本文件的内容：\n" + txtBuilder.getResult());
+            Console.WriteLine("输出到文本文件的内容：\n" + txtBuilder.GetResult());
             //测试输出到xml文件
             XmlBuilder xmlBuilder = new XmlBuilder();
             Director director2 = new Director(xmlBuilder);
-            director2.construct(ehm, mapData, efm);
+            director2.Construct(ehm, mapData, efm);
             //把要输出的内容输出到控制台看看
-            Console.WriteLine("输出到XML文件的内容：\n" + xmlBuilder.getResult());
+            Console.WriteLine("输出到XML文件的内容：\n" + xmlBuilder.GetResult());
         }
     }
 }

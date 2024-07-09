@@ -12,12 +12,12 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
         /**
          * 持有当前需要使用的生成器对象
          */
-        private Builder builder;
+        private readonly IBuilder builder;
         /**
          * 构造方法，传入生成器对象
          * @param builder 生成器对象
          */
-        public Director(Builder builder)
+        public Director(IBuilder builder)
         {
             this.builder = builder;
         }
@@ -28,14 +28,14 @@ namespace CoreConsoleApp.设计模式.Builder构造器模式.场景1.UseBuilder
          * @param mapData 数据的内容
          * @param efm 文件尾的内容
          */
-        public void construct(HeaderModel ehm, Dictionary<string, Collection<DataModel>> mapData, FooterModel efm)
+        public void Construct(HeaderModel ehm, Dictionary<string, Collection<DataModel>> mapData, FooterModel efm)
         {
             //1：先构建Header
-            builder.buildHeader(ehm);
+            builder.BuildHeader(ehm);
             //2：然后构建Body
-            builder.buildBody(mapData);
+            builder.BuildBody(mapData);
             //3：然后构建Footer
-            builder.buildFooter(efm);
+            builder.BuildFooter(efm);
         }
     }
 }
