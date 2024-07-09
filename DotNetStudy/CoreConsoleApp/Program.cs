@@ -43,6 +43,7 @@ namespace CoreConsoleApp
             FaUse.Client.Index();
 
             //3. 调用反射工厂的逻辑
+            Console.WriteLine(">>> 3. 调用反射工厂的逻辑");
             RF.Client.Index();
 
             //4. 调用创建者模式的逻辑

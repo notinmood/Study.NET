@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Reflection;
+using CoreConsoleApp.反射研究;
 using CoreConsoleApp.设计模式.Factory工厂模式.Biz;
 
 namespace CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射工厂
@@ -10,7 +10,7 @@ namespace CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射�
         {
             string classFullName = "CoreConsoleApp.设计模式.Factory工厂模式.Biz." + name;
 
-            // 获取 Assembly 对象
+            /*// 获取 Assembly 对象
             Assembly assembly = Assembly.GetExecutingAssembly();
 
             // 通过 Type 的 FullName 获取 Type 对象
@@ -21,7 +21,10 @@ namespace CoreConsoleApp.设计模式.Factory工厂模式.ReflectFactory反射�
 
             // 创建 MyClass 的实例
             Enemy enemy = (Enemy)Activator.CreateInstance(type, constructorArgs);
-            return enemy;
+            return enemy;*/
+            Random random = new Random();
+            object[] constructorArgs = [random.Next(width), 0];
+            return (Enemy)ReflectHelper.CreateInstance(classFullName, constructorArgs);
         }
     }
 }
