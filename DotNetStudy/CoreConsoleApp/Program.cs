@@ -46,8 +46,8 @@ namespace CoreConsoleApp
             RF.Client.Index();
 
             //4. 调用创建者模式的逻辑
-            CoreConsoleApp.设计模式.Builder构造器模式.场景1.NoPattern.Client.Index();
-            CoreConsoleApp.设计模式.Builder构造器模式.场景2.X.对象构建示例.UsePattern.Client.Index();
+            设计模式.Builder构造器模式.场景1.NoPattern.Client.Index();
+            设计模式.Builder构造器模式.场景2.X.对象构建示例.UsePattern.Client.Index();
 
             //5. 调用发布订阅模式的逻辑
             PSO.Client.Index();
@@ -68,6 +68,10 @@ namespace CoreConsoleApp
 
             //9. 调用策略模式的逻辑
             STU.Client.Index();
+
+            //10. 调用责任链模式
+            设计模式.ChainOfResponsibility责任链模式.NoPattern.Client.Index();
+            设计模式.ChainOfResponsibility责任链模式.UsePattern.Client.Index();
         }
     }
 }
