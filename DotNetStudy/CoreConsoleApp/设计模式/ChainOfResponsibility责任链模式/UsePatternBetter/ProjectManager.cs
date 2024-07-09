@@ -7,6 +7,7 @@
  */
 
 using System;
+using CoreConsoleApp.反射研究;
 
 namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePatternBetter
 {
@@ -15,49 +16,28 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
  */
     public class ProjectManager : Handler
     {
-        public override Object HandleRequest(RequestModel rm)
+        public override object HandleRequest(RequestModel model)
         {
-            if (FeeRequestModel.FEE_TYPE == (rm.getType()))
-            {
-                //表示聚餐费用申请
-                return handleFeeRequest(rm);
-            }
-            else
-            {
-                //其它的事由，项目经理暂时不想处理
-                return base.HandleRequest(rm);
-            }
+            return LocalHandleRequest(model,"Project");
+
+            //string requestModelType = model.GetType();
+
+            ////表示聚餐费用申请
+            //string classFullName = $"CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePatternBetter.Project{requestModelType}Strategy";
+            //object strategyObject = ReflectHelper.CreateInstance(classFullName);
+
+            //if (strategyObject == null)
+            //{
+            //    //其它未定义的事由，项目经理暂时不想处理
+            //    return base.HandleRequest(model);
+            //}
+            //else
+            //{
+            //    ILocalHandleStrategy strategy = (ILocalHandleStrategy)strategyObject;
+            //    return strategy.LocalHandle(model, this);
+            //}
         }
-        private Object handleFeeRequest(RequestModel rm)
-        {
-            //先把通用的对象造型回来 //非常不好！！！可以使用策略模式，分别实现
-            FeeRequestModel frm = (FeeRequestModel)rm;
-            String str = "";
-            //项目经理的权限比较小，只能在500以内
-            if (frm.getFee() < 500)
-            {
-                //为了测试，简单点，只同意小李的
-                if ("小李" == (frm.getUser()))
-                {
-                    str = "项目经理同意" + frm.getUser() + "聚餐费用" + frm.getFee() + "元的请求";
-                }
-                else
-                {
-                    //其它人一律不同意
-                    str = "项目经理不同意" + frm.getUser() + "聚餐费用" + frm.getFee() + "元的请求";
-                }
-                return str;
-            }
-            else
-            {
-                //超过500，继续传递给级别更高的人处理
-                if (this.successor != null)
-                {
-                    return successor.HandleRequest(rm);
-                }
-            }
-            return str;
-        }
+        
     }
 
 }

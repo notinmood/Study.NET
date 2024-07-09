@@ -18,10 +18,11 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
         /**
          * 约定具体的业务类型
          */
-        public static string FEE_TYPE = "fee";
-        public FeeRequestModel() : base(FEE_TYPE)
+        public static string FEE_TYPE = "Fee";
+        public FeeRequestModel(string user ,double fee) : base(FEE_TYPE)
         {
-
+            this.user= user;
+            this.fee= fee;
         }
         /**
          * 申请人

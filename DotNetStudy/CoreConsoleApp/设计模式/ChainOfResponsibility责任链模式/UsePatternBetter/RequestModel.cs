@@ -18,16 +18,16 @@ namespace CoreConsoleApp.设计模式.ChainOfResponsibility责任链模式.UsePa
         /**
          * 表示具体的业务类型
          */
-        private String type;
+        private string type;
         /**
          * 通过构造方法把具体的业务类型传递进来
          * @param type 具体的业务类型
          */
-        public RequestModel(String type)
+        public RequestModel(string type)
         {
             this.type = type;
         }
-        public String getType()
+        public string GetModelType()
         {
             return type;
         }

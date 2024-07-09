@@ -73,6 +73,7 @@ namespace CoreConsoleApp
             //10. 调用责任链模式
             设计模式.ChainOfResponsibility责任链模式.NoPattern.Client.Index();
             设计模式.ChainOfResponsibility责任链模式.UsePattern.Client.Index();
+            设计模式.ChainOfResponsibility责任链模式.UsePatternBetter.Client.Index();
         }
     }
 }
