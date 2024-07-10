@@ -36,6 +36,9 @@ namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
                         T providerInstance = (T)ReflectHelper.CreateInstance(classFullName);
                         
                         // 可能需要进一步初始化
+                        //...
+
+                        // 添加到本地容器中，供后续调用。
                         providers.Add(providerName, providerInstance);
                     }
                     catch (Exception ex)

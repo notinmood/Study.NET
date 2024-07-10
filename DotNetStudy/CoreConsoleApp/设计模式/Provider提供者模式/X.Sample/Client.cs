@@ -17,7 +17,8 @@ namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
 
         public static void Index()
         {
-            Console.WriteLine(LoadProvider().ShowData());
+            LanguageProvider provider = LoadProvider();
+            Console.WriteLine(provider.ShowData());
         }
 
         private static LanguageProvider LoadProvider(string providerSelected = "")
