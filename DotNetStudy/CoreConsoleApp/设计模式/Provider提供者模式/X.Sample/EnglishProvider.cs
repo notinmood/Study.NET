@@ -8,7 +8,7 @@
 
 namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
 {
-    public class EnglishProvider : ParentProvider
+    public class EnglishProvider : LanguageProvider
     {
         public override string ShowData()
         {

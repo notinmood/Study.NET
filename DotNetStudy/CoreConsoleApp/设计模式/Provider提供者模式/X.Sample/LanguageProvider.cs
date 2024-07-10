@@ -10,7 +10,7 @@ using System.Configuration.Provider;
 
 namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
 {
-    public abstract class ParentProvider : ProviderBase
+    public abstract class LanguageProvider : ProviderBase
     {
         public abstract string ShowData();
     }
