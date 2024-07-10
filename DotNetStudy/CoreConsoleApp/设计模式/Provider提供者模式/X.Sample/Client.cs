@@ -7,27 +7,30 @@
  */
 
 using System;
-using System.Collections.Generic;
 
 namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
 {
     internal class Client
     {
-        private LanguageProvider provider;
-        private LanguageProviderCollection providerCollection;
+        private static LanguageProvider provider;
+        private static ProviderCollection<LanguageProvider> providerCollection;
 
         public static void Index()
         {
-            Console.WriteLine(LoadProvider());
+            Console.WriteLine(LoadProvider().ShowData());
         }
 
-        private static object LoadProvider(string providerSelected = "")
+        private static LanguageProvider LoadProvider(string providerSelected = "")
         {
-            //LanguageProviderConfigurationSection config = null;
-            //config = (LanguageProviderConfigurationSection)ConfigurationManager.GetSection("LanguageProvider");
-            List<LanguageProvider> list = ProvidersHelper.InstantiateProviders<LanguageProvider>("LanguageProvider");
-            //provider = providerCollection[providerSelected ?? config.DefaultProvider];
-            return list;
+            providerCollection = ProvidersHelper.InstantiateProviders<LanguageProvider>("LanguageProvider");
+
+            if (providerSelected == "")
+            {
+                return providerCollection.DefaultProvider;
+            }
+
+            provider = providerCollection[providerSelected];
+            return provider;
         }
     }
 }

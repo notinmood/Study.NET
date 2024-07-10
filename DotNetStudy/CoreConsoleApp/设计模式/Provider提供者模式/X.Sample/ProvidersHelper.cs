@@ -7,31 +7,36 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Configuration.Provider;
 using CoreConsoleApp.反射研究;
 
 namespace CoreConsoleApp.设计模式.Provider提供者模式.X.Sample
 {
-    internal class ProvidersHelper
+    public class ProvidersHelper
     {
-        public static List<T> InstantiateProviders<T>(string sectionName) where T : ProviderBase
+        public static ProviderCollection<T> InstantiateProviders<T>(string sectionName) where T : ProviderBase
         {
-            var providers = new List<T>();
-            var providerConfig = ConfigurationManager.GetSection(sectionName) as ProviderSettingsCollection;
+            var providers = new ProviderCollection<T>();
 
-            if (providerConfig != null)
+            ProviderConfigurationSection providerSection = ConfigurationManager.GetSection(sectionName) as ProviderConfigurationSection;
+
+            if (providerSection != null)
             {
-                foreach (ProviderSettings providerSetting in providerConfig)
+                providers.SetDefaultProviderName(providerSection.DefaultProvider);
+
+                foreach (ProviderSettings providerSetting in providerSection.Providers)
                 {
                     try
                     {
-                        string classFullName = providerSetting.Name;
+                        string providerName = providerSetting.Name;
+                        string classFullName = providerSetting.Type;
+                        
                         // 解析提供者类型
-                        var providerInstance = (T)ReflectHelper.CreateInstance(classFullName);
+                        T providerInstance = (T)ReflectHelper.CreateInstance(classFullName);
+                        
                         // 可能需要进一步初始化
-                        providers.Add(providerInstance);
+                        providers.Add(providerName, providerInstance);
                     }
                     catch (Exception ex)
                     {

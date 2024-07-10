@@ -61,13 +61,13 @@ namespace CoreConsoleApp
             //设计模式.ChainOfResponsibility责任链模式.UsePattern.Client.Index();
             //设计模式.ChainOfResponsibility责任链模式.UsePatternBetter.Client.Index();
 
-            ////11. 调用Provider 模式
-            //设计模式.Provider提供者模式.X.Sample.Client.Index();
+            //11. 调用Provider 模式
+            设计模式.Provider提供者模式.X.Sample.Client.Index();
 
 
 
-            // 20. 调用自定义配置节点的逻辑
-            配置文件中自定义内容.最简方式.Client.Index();
+            //// 20. 调用自定义配置节点的逻辑
+            //配置文件中自定义内容.最简方式.Client.Index();
         }
     }
 }
