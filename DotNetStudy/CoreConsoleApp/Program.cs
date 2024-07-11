@@ -61,8 +61,12 @@ namespace CoreConsoleApp
             //设计模式.ChainOfResponsibility责任链模式.UsePattern.Client.Index();
             //设计模式.ChainOfResponsibility责任链模式.UsePatternBetter.Client.Index();
 
-            //11. 调用Provider 模式
-            设计模式.Provider提供者模式.X.Sample.Client.Index();
+            ////11. 调用Provider 模式
+            //设计模式.Provider提供者模式.X.Sample.Client.Index();
+
+            //12. 调用装饰器模式
+            //设计模式.Decorator装饰者.NoPattern.Client.Index();
+            设计模式.Decorator装饰者.UsePattern.Client.Index();
 
 
 
