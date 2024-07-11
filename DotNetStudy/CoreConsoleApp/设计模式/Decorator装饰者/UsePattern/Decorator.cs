@@ -7,7 +7,6 @@
  */
 
 using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
 {
