@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="设计模式\Provider提供者模式\X.Sample\00.readme.MD" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="设计模式\Provider提供者模式\X.Sample\00.readme.MD" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.6" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>

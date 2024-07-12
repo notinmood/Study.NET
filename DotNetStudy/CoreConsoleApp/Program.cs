@@ -64,9 +64,13 @@ namespace CoreConsoleApp
             ////11. 调用Provider 模式
             //设计模式.Provider提供者模式.X.Sample.Client.Index();
 
-            //12. 调用装饰器模式
+            ////12. 调用装饰器模式
             //设计模式.Decorator装饰者.NoPattern.Client.Index();
-            设计模式.Decorator装饰者.UsePattern.Client.Index();
+            //设计模式.Decorator装饰者.UsePattern.Client.Index();
+
+            //13. 调用模板方法模式
+            设计模式.TemplateMethod模板方法模式.NoPattern.Client.Index();
+            设计模式.TemplateMethod模板方法模式.UsePattern.Client.Index();
 
 
 
