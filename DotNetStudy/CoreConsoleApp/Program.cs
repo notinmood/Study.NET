@@ -19,7 +19,7 @@ namespace CoreConsoleApp
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!以下是测试结果：");
 
             ////1. 调用逆变协变的逻辑。
             //Client.index();
@@ -68,14 +68,28 @@ namespace CoreConsoleApp
             //设计模式.Decorator装饰者.NoPattern.Client.Index();
             //设计模式.Decorator装饰者.UsePattern.Client.Index();
 
-            //13. 调用模板方法模式
-            设计模式.TemplateMethod模板方法模式.NoPattern.Client.Index();
-            设计模式.TemplateMethod模板方法模式.UsePattern.Client.Index();
+            ////13. 调用模板方法模式
+            //设计模式.TemplateMethod模板方法模式.NoPattern.Client.Index();
+            //设计模式.TemplateMethod模板方法模式.UsePattern.Client.Index();
 
 
 
             //// 20. 调用自定义配置节点的逻辑
             //配置文件中自定义内容.最简方式.Client.Index();
+
+            ////21. 扩展方法研究的逻辑
+            //扩展方法研究.Client.Index();
+
+            //22. Linq使用研究的逻辑
+            Linq使用研究.Clinet.Select投影();
+            Linq使用研究.Clinet.Where过滤();
+            Linq使用研究.Clinet.SelectMany投影();
+            Linq使用研究.Clinet.OrderBy排序();
+            Linq使用研究.Clinet.OrderByDescending排序();
+            Linq使用研究.Clinet.ThenBy排序();
+            Linq使用研究.Clinet.ThenByDescending排序();
+            Linq使用研究.Clinet.Reverse逆转排序();
+            Linq使用研究.Clinet.Join连接();  
         }
     }
 }
