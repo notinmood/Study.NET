@@ -7,11 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
 {
@@ -20,11 +15,11 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
    */
     public class OriginComponent : IComponent
     {
-      public override double CalcPrize(string user, DateTime begin, DateTime end)
-    {
-        //只是一个默认的实现，默认没有奖金  
-        return 0;
+        public override double CalcPrize(string user, DateTime begin, DateTime end)
+        {
+            //只是一个默认的实现，默认没有奖金  
+            return 0;
+        }
     }
-} 
 
 }

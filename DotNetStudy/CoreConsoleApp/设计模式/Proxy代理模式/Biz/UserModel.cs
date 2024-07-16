@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreConsoleApp.设计模式.Proxy代理模式.NoPattern
+namespace CoreConsoleApp.设计模式.Proxy代理模式.Biz
 {
     /**
   * 描述用户数据的对象
@@ -22,53 +22,53 @@ namespace CoreConsoleApp.设计模式.Proxy代理模式.NoPattern
         /**
          * 用户编号
          */
-        private String userId;
+        private string userId;
         /**
          * 用户姓名
          */
-        private String name;
+        private string name;
         /**
          * 部门编号
          */
-        private String depId;
+        private string depId;
         /**
          * 性别
          */
-        private String sex;
+        private string sex;
 
-        public String getUserId()
+        public string GetUserId()
         {
             return userId;
         }
-        public void setUserId(String userId)
+        public void SetUserId(string userId)
         {
             this.userId = userId;
         }
-        public String getName()
+        public string GetName()
         {
             return name;
         }
-        public void setName(String name)
+        public void SetName(string name)
         {
             this.name = name;
         }
-        public String getDepId()
+        public string GetDepId()
         {
             return depId;
         }
-        public void setDepId(String depId)
+        public void SetDepId(string depId)
         {
             this.depId = depId;
         }
-        public String getSex()
+        public string GetSex()
         {
             return sex;
         }
-        public void setSex(String sex)
+        public void SetSex(string sex)
         {
             this.sex = sex;
         }
-        public String ToString()
+        public override string ToString()
         {
             return "userId=" + userId + ",name=" + name + ",depId=" + depId + ",sex=" + sex + "\n";
         }

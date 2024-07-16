@@ -7,11 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualBasic;
 
 namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
 {
@@ -35,14 +30,14 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
 
             //注意：这里只需使用最后组合好的对象调用业务方法即可，会依次调用回去  
             //日期对象都没有用上，所以传null就可以了  
-            double zs = d2.CalcPrize("张三", DateAndTime.Now, DateAndTime.Now);
+            double zs = d2.CalcPrize("张三", DateTime.Now, DateTime.Now);
             Console.WriteLine("==========张三应得奖金：" + zs);
-            double ls = d2.CalcPrize("李四", DateAndTime.Now, DateAndTime.Now);
+            double ls = d2.CalcPrize("李四", DateTime.Now, DateTime.Now);
             Console.WriteLine("==========李四应得奖金：" + ls);
 
             //如果是业务经理，还需要一个计算团队的奖金计算  
             Decorator d3 = new GroupPrizeDecorator(d2);
-            double ww = d3.CalcPrize("王五", DateAndTime.Now, DateAndTime.Now);
+            double ww = d3.CalcPrize("王五", DateTime.Now, DateTime.Now);
             Console.WriteLine("==========王经理应得奖金：" + ww);
         }
     }

@@ -8,6 +8,7 @@
 
 using System;
 using System.Collections.Generic;
+using CoreConsoleApp.设计模式.Proxy代理模式.Biz;
 
 namespace CoreConsoleApp.设计模式.Proxy代理模式.NoPattern
 {
@@ -21,7 +22,7 @@ namespace CoreConsoleApp.设计模式.Proxy代理模式.NoPattern
          * @param depId 部门编号
          * @return 该部门下的所有人员
          */
-        public List<UserModel> getUserByDepId(String depId)
+        public List<UserModel> getUserByDepId(string depId)
         {
             List<UserModel> col = new List<UserModel>();
             //Connection conn = null;
