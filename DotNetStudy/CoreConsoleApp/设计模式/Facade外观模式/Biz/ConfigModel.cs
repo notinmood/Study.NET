@@ -20,29 +20,29 @@
          */
         private bool needGenDAO = true;
 
-        public bool isNeedGenPresentation()
+        public bool IsNeedGenPresentation()
         {
             return needGenPresentation;
         }
-        public void setNeedGenPresentation(bool needGenPresentation)
+        public void SetNeedGenPresentation(bool needGenPresentation)
         {
             this.needGenPresentation = needGenPresentation;
         }
 
-        public bool isNeedGenBusiness()
+        public bool IsNeedGenBusiness()
         {
             return needGenBusiness;
         }
-        public void setNeedGenBusiness(bool needGenBusiness)
+        public void SetNeedGenBusiness(bool needGenBusiness)
         {
             this.needGenBusiness = needGenBusiness;
         }
 
-        public bool isNeedGenDAO()
+        public bool IsNeedGenDAO()
         {
             return needGenDAO;
         }
-        public void setNeedGenDAO(bool needGenDAO)
+        public void SetNeedGenDAO(bool needGenDAO)
         {
             this.needGenDAO = needGenDAO;
         }

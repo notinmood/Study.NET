@@ -7,10 +7,10 @@ namespace CoreConsoleApp.设计模式.Facade外观模式.Biz
    */
     public class DAO
     {
-        public void generate()
+        public void Generate()
         {
-            ConfigModel cm = ConfigManager.getInstance().getConfigData();
-            if (cm.isNeedGenDAO())
+            ConfigModel cm = ConfigManager.GetInstance().GetConfigData();
+            if (cm.IsNeedGenDAO())
             {
                 Console.WriteLine("正在生成数据层代码文件");
             }

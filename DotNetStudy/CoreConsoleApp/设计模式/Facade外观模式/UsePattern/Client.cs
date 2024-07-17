@@ -5,7 +5,7 @@
         public static void Index()
         {
             //使用Facade
-            new Facade().generate();
+            new Facade().Generate();
         }
     }
 

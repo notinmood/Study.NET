@@ -12,7 +12,7 @@
         {
             //
         }
-        public static ConfigManager getInstance()
+        public static ConfigManager GetInstance()
         {
             if (instance == null)
             {
@@ -26,7 +26,7 @@
          * 获取配置的数据
          * @return 配置的数据
          */
-        public ConfigModel getConfigData()
+        public ConfigModel GetConfigData()
         {
             return cm;
         }

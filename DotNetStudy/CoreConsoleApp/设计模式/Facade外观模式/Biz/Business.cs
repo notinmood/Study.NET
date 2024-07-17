@@ -7,10 +7,10 @@ namespace CoreConsoleApp.设计模式.Facade外观模式.Biz
    */
     public class Business
     {
-        public void generate()
+        public void Generate()
         {
-            ConfigModel cm = ConfigManager.getInstance().getConfigData();
-            if (cm.isNeedGenBusiness())
+            ConfigModel cm = ConfigManager.GetInstance().GetConfigData();
+            if (cm.IsNeedGenBusiness())
             {
                 Console.WriteLine("正在生成逻辑层代码文件");
             }
