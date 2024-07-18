@@ -21,19 +21,19 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.UsePatter
          * 登录的密码
          */
         private string pwd;
-        public string getLoginId()
+        public string GetLoginId()
         {
             return loginId;
         }
-        public void setLoginId(string loginId)
+        public void SetLoginId(string loginId)
         {
             this.loginId = loginId;
         }
-        public string getPwd()
+        public string GetPwd()
         {
             return pwd;
         }
-        public void setPwd(string pwd)
+        public void SetPwd(string pwd)
         {
             this.pwd = pwd;
         }

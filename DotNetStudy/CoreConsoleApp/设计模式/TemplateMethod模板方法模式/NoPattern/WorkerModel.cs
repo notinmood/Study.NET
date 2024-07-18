@@ -20,35 +20,35 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
     public class WorkerModel
     {
         private string uuid, workerId, pwd, name;
-        public string getUuid()
+        public string GetUuid()
         {
             return uuid;
         }
-        public void setUuid(string uuid)
+        public void SetUuid(string uuid)
         {
             this.uuid = uuid;
         }
-        public string getWorkerId()
+        public string GetWorkerId()
         {
             return workerId;
         }
-        public void setWorkerId(string workerId)
+        public void SetWorkerId(string workerId)
         {
             this.workerId = workerId;
         }
-        public string getPwd()
+        public string GetPwd()
         {
             return pwd;
         }
-        public void setPwd(string pwd)
+        public void SetPwd(string pwd)
         {
             this.pwd = pwd;
         }
-        public string getName()
+        public string GetName()
         {
             return name;
         }
-        public void setName(string name)
+        public void SetName(string name)
         {
             this.name = name;
         }

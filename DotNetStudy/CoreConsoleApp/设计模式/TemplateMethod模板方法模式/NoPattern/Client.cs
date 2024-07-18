@@ -15,11 +15,11 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
         public static void Index()
         {
             NormalLoginModel normalLoginModel = new NormalLoginModel();
-            normalLoginModel.setUserId("1");
-            normalLoginModel.setPwd("123");
+            normalLoginModel.SetUserId("1");
+            normalLoginModel.SetPwd("123");
 
             NormalLogin normalLogin = new NormalLogin();
-            bool normalResult = normalLogin.login(normalLoginModel);
+            bool normalResult = normalLogin.Login(normalLoginModel);
             if (normalResult)
             {
                 Console.WriteLine("✔前端用户登录成功！");
@@ -30,11 +30,11 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
             }
 
             WorkerLoginModel workerLoginModel = new WorkerLoginModel();
-            workerLoginModel.setWorkerId("1");
-            workerLoginModel.setPwd("worker1");
+            workerLoginModel.SetWorkerId("1");
+            workerLoginModel.SetPwd("worker1");
 
             WorkerLogin workerLogin = new WorkerLogin();
-            bool workerResult = workerLogin.login(workerLoginModel);
+            bool workerResult = workerLogin.Login(workerLoginModel);
             if (workerResult)
             {
                 Console.WriteLine("✔内部员工登录成功！");
@@ -43,8 +43,6 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
             {
                 Console.WriteLine("❌内部员工登录失败！");
             }
-
-
         }
     }
 }

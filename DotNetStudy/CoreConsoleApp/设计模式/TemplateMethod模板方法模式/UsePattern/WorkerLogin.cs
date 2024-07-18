@@ -15,16 +15,16 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.UsePatter
  */
     public class WorkerLogin : LoginTemplate
     {
-        public override LoginModel findLoginUser(string loginId)
+        public override LoginModel FindLoginUser(string loginId)
         {
             // 这里省略具体的处理，仅做示意，返回一个有默认数据的对象
             LoginModel lm = new LoginModel();
-            lm.setLoginId(loginId);
-            lm.setPwd("workerpwd");
+            lm.SetLoginId(loginId);
+            lm.SetPwd("workerpwd");
             return lm;
         }
 
-        public override string encryptPwd(string pwd)
+        public override string EncryptPwd(string pwd)
         {
             //覆盖父类的方法，提供真正的加密实现
             //这里对密码进行加密，比如使用：MD5、3DES等等，省略了

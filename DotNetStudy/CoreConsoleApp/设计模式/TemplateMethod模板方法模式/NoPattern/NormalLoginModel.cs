@@ -18,15 +18,15 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
         {
             return userId;
         }
-        public void setUserId(string userId)
+        public void SetUserId(string userId)
         {
             this.userId = userId;
         }
-        public string getPwd()
+        public string GetPwd()
         {
             return pwd;
         }
-        public void setPwd(string pwd)
+        public void SetPwd(string pwd)
         {
             this.pwd = pwd;
         }

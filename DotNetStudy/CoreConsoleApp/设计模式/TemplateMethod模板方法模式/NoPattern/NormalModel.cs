@@ -14,19 +14,19 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
     public class NormalModel
     {
         private string uuid, userId, pwd, name;
-        public string getUuid()
+        public string GetUuid()
         {
             return uuid;
         }
-        public void setUuid(string uuid)
+        public void SetUuid(string uuid)
         {
             this.uuid = uuid;
         }
-        public string getUserId()
+        public string GetUserId()
         {
             return userId;
         }
-        public void setUserId(string userId)
+        public void SetUserId(string userId)
         {
             this.userId = userId;
         }
@@ -34,15 +34,15 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
         {
             return pwd;
         }
-        public void setPwd(string pwd)
+        public void SetPwd(string pwd)
         {
             this.pwd = pwd;
         }
-        public string getName()
+        public string GetName()
         {
             return name;
         }
-        public void setName(string name)
+        public void SetName(string name)
         {
             this.name = name;
         }

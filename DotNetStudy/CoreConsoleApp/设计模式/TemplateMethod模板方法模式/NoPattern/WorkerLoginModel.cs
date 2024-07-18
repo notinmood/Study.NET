@@ -24,15 +24,15 @@ namespace CoreConsoleApp.设计模式.TemplateMethod模板方法模式.NoPattern
         {
             return workerId;
         }
-        public void setWorkerId(string workerId)
+        public void SetWorkerId(string workerId)
         {
             this.workerId = workerId;
         }
-        public string getPwd()
+        public string GetPwd()
         {
             return pwd;
         }
-        public void setPwd(string pwd)
+        public void SetPwd(string pwd)
         {
             this.pwd = pwd;
         }
