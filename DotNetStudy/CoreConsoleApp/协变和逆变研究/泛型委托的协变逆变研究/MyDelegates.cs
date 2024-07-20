@@ -1,17 +1,17 @@
-﻿namespace CoreConsoleApp.协变和逆变研究
+﻿namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
 {
-    /// <summary>
-    /// 非泛型委托
-    /// </summary>
-    /// <param name="input"></param>
-    public delegate void MyActionNo(string input);
+    ///// <summary>
+    ///// 非泛型委托
+    ///// </summary>
+    ///// <param name="input"></param>
+    //public delegate void MyActionNo(string input);
 
-    /// <summary>
-    /// 不支持协变逆变的泛型委托
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="param"></param>
-    public delegate void MyActionCommon<T>(T param);//不支持逆变与协变
+    ///// <summary>
+    ///// 不支持协变逆变的泛型委托
+    ///// </summary>
+    ///// <typeparam name="T"></typeparam>
+    ///// <param name="param"></param>
+    //public delegate void MyActionCommon<T>(T param);//不支持逆变与协变
 
     /// <summary>
     /// 支持逆变的泛型委托

@@ -3,8 +3,8 @@
 2. 但实际执行的时候，是执行的 Sub.Test(string),他需要一个string类型的参数
 3. 把 object 赋值给 string，这是违反 李氏替换原则的。
 
-```JavaScript
-Base<Object> myBase2 = new Sub<string>();
+```cs
+IBase<object> myBase2 = new Sub<string>();
 myBase2.Test(123);
 ```
 

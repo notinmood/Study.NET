@@ -30,6 +30,7 @@ namespace CoreConsoleApp.Linq使用研究
                 Console.WriteLine(s);
             }
 
+            //方式2. 使用方法模式
             var result3 = Container.Students.Select(s => $"学生姓名：{s.Name};学生年龄：{s.Age}");
             foreach (var s in result3)
             {

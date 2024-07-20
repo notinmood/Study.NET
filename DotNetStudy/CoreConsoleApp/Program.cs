@@ -3,16 +3,14 @@
 
 using System;
 
-
-
+#pragma warning disable
 namespace CoreConsoleApp
 {
     /// <summary>
     /// 
     /// </summary>
-    class Program
+    public static class Program
     {
-
         /// <summary>
         /// 
         /// </summary>
@@ -23,6 +21,7 @@ namespace CoreConsoleApp
 
             ////1. 调用逆变协变的逻辑。
             //Client.index();
+            协变和逆变研究.泛型委托的协变逆变研究.使用不带协变逆变功能的泛型委托.Index();
 
             ////2. 调用门面模式的逻辑
             //设计模式.Facade外观模式.NoPattern.Client.Index();
@@ -80,16 +79,16 @@ namespace CoreConsoleApp
             ////21. 扩展方法研究的逻辑
             //扩展方法研究.Client.Index();
 
-            //22. Linq使用研究的逻辑
-            Linq使用研究.Clinet.Select投影();
-            Linq使用研究.Clinet.Where过滤();
-            Linq使用研究.Clinet.SelectMany投影();
-            Linq使用研究.Clinet.OrderBy排序();
-            Linq使用研究.Clinet.OrderByDescending排序();
-            Linq使用研究.Clinet.ThenBy排序();
-            Linq使用研究.Clinet.ThenByDescending排序();
-            Linq使用研究.Clinet.Reverse逆转排序();
-            Linq使用研究.Clinet.Join连接();  
+            ////22. Linq使用研究的逻辑
+            //Linq使用研究.Clinet.Select投影();
+            //Linq使用研究.Clinet.Where过滤();
+            //Linq使用研究.Clinet.SelectMany投影();
+            //Linq使用研究.Clinet.OrderBy排序();
+            //Linq使用研究.Clinet.OrderByDescending排序();
+            //Linq使用研究.Clinet.ThenBy排序();
+            //Linq使用研究.Clinet.ThenByDescending排序();
+            //Linq使用研究.Clinet.Reverse逆转排序();
+            //Linq使用研究.Clinet.Join连接();
         }
     }
 }
