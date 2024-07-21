@@ -23,18 +23,14 @@ namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
     internal static class 使用不带协变逆变功能的泛型委托
     {
         public static void Index()
-        {
+        {         
             Console.WriteLine("start!");
 
-            //1. 用string实例化泛型委托
-            //1.1. 创建委托实例
+            //1. 创建泛型委托实例
+            //1.1 用string实例化泛型委托
             MyActionWithParam<string> myActionString = new(Utils.DisplayInformation);
-            //1.2. 调用委托实例
-            myActionString("qingdao");
 
-
-            //2. 用object实例化泛型委托
-            //2.1. 创建委托实例
+            //1.2. 用object实例化泛型委托
             MyActionWithParam<object> myActionObject = new MyActionWithParam<object>(Utils.DealInput<object>);
             ////以下写法都可以，Utils.DealInput 能自动推断为 Utils.DealInput<object>
             //MyActionWithParam<object> myActionObject2 = new MyActionWithParam<object>(Utils.DealInput);
@@ -43,29 +39,40 @@ namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
             //MyActionWithParam<object> myActionObject5 = Utils.DealInput<object>;
             //MyActionWithParam<object> myActionObject6 = Utils.DealInput;
 
-            //2.2. 调用委托实例(不涉及到泛型结构对象的替换)
-            myActionObject("qingdao");
-            myActionObject(123);
-
-            //2.3. 调用委托实例(涉及到泛型结构对象的替换)
+            //2. 尝试交叉赋值
             /**
              * 以下两种替换都不会成功，因为这两个实例所属的泛型结构的类型
              * MyActionWithParam<object>和MyActionWithParam<string>
              * 可以理解为他们都是MyActionWithParam<T>的子类，
              * 他们之间是兄弟关系，非继承关系，因此不满足李氏替换原则。
+             * 如果要让一下的某种赋值过程能成立，就需要为T指定协变/逆变规则。
              */
             //myActionObject = myActionString;
             //myActionString = myActionObject;
-            //myActionObject("qingdao");
-            //myActionString("qingdao");
 
 
-            //3.不带逆变协变的泛型委托使用，另外的例子
-            MyActionWithParamAndResult<object> myActionPR = new MyActionWithParamAndResult<object>(Utils.DealInputOutput);
-            object o = myActionPR(123);
+            //3. 方法调用(不涉及到泛型结构对象的替换)
+            //3.1. 调用string类型的委托实例
+            myActionString("qingdao");
+            //3.2. 调用object类型的委托实例
+            myActionObject("qingdao");
+            myActionObject(123);
+
+
+            //98.不带逆变协变的泛型委托使用，另外的例子
+            MyActionWithParamAndResult<object> myObjectActionPR = new MyActionWithParamAndResult<object>(Utils.DealInputOutput);
+            MyActionWithParamAndResult<string> myStringActionPR = Utils.DealInputOutput;
+
+            //以下交叉赋值都不成立
+            //myObjectActionPR = myStringActionPR;
+            //myStringActionPR = myObjectActionPR;
+
+            object o = myObjectActionPR(123);
             Console.WriteLine($"返回值为：{o}");
+            string s = myStringActionPR("China");
+            Console.WriteLine($"返回值为：{s}");
 
-            //4. 使用不具备协变逆变能力的委托，更多的例子
+            //99. 使用不具备协变逆变能力的委托，更多的例子
             //4.0. 使用不具备协变逆变能力的委托，其不能将有派生关系的泛型参数声明的委托赋给目标类型声明的委托。
             MyActionWithParam<B> myActionB = new(Utils.DealInput);
             MyActionWithParam<A> myActionA = new(Utils.DealInput);

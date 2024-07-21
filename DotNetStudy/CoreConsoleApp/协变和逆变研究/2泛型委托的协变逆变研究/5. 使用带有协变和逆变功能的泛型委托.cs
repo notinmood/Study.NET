@@ -9,6 +9,7 @@
 using System;
 using CoreConsoleApp.协变和逆变研究.Biz;
 
+#pragma warning disable
 namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
 {
     /// <summary>
