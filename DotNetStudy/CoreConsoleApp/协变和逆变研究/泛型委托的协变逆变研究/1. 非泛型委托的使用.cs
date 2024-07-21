@@ -7,10 +7,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
 {
@@ -22,7 +18,8 @@ namespace CoreConsoleApp.协变和逆变研究.泛型委托的协变逆变研究
 
     internal static class 非泛型委托的使用
     {
-        public static void Index() {
+        public static void Index()
+        {
             Console.WriteLine("start!");
 
             //1.1. 实例化委托类型的变量
