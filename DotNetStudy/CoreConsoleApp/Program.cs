@@ -22,6 +22,7 @@ namespace CoreConsoleApp
             ////1. 调用逆变协变的逻辑。
             //Client.index();
             协变和逆变研究.泛型委托的协变逆变研究.使用不带协变逆变功能的泛型委托.Index();
+            协变和逆变研究.泛型委托的协变逆变研究.使用带有协变和逆变功能的泛型委托.Index();
 
             ////2. 调用门面模式的逻辑
             //设计模式.Facade外观模式.NoPattern.Client.Index();

@@ -2,5 +2,9 @@
 {
     internal class A
     {
+        public override string ToString()
+        {
+            return "格式化后的数据为："+ base.ToString();
+        }
     }
 }
