@@ -25,30 +25,30 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
          * 包含流程处理需要的业务数据对象，不知道具体类型,为了简单，不去使用泛型，
          * 用Object，反正只是传递到具体的状态对象里面
          */
-        private Object businessVO = null;
+        private object businessVO = null;
         /**
          * 执行工作，客户端处理流程的接口方法。
          * 在客户完成自己的业务工作后调用
          */
-        public void doWork()
+        public void DoWork()
         {
             //转调相应的状态对象真正完成功能处理
-            this.state.doWork(this);
+            this.state.DoWork(this);
         }
 
-        public IState getState()
+        public IState GetState()
         {
             return state;
         }
-        public void setState(IState state)
+        public void SetState(IState state)
         {
             this.state = state;
         }
-        public Object getBusinessVO()
+        public object GetBusinessVO()
         {
             return businessVO;
         }
-        public void setBusinessVO(Object businessVO)
+        public void SetBusinessVO(object businessVO)
         {
             this.businessVO = businessVO;
         }

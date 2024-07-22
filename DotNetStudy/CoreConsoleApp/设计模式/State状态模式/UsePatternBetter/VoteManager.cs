@@ -20,15 +20,15 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
          * 记录当前每个用户对应的状态处理对象，每个用户当前的状态是不同的
          * Map<String,VoteState>对应Map<用户名称,当前对应的状态处理对象>
          */
-        private Dictionary<string, IVoteState> mapState = new Dictionary<string, IVoteState>();
+        private readonly Dictionary<string, IVoteState> mapState = [];
         /**
          * 记录用户投票的结果,Map<String,String>对应Map<用户名称,投票的选项>
          */
-        private Dictionary<string, string> mapVote = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> mapVote = [];
         /**
          * 记录用户投票次数,Map<String,Integer>对应Map<用户名称,投票的次数>
          */
-        private Dictionary<string, int> mapVoteCount = new Dictionary<string, int>();
+        private readonly Dictionary<string, int> mapVoteCount = [];
         /**
          * 获取记录用户投票结果的Map
          * @return 记录用户投票结果的Map
@@ -48,7 +48,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
             get { return mapState; }
         }
 
-        public int getCountVoteed(string user)
+        public int GetCountVoteed(string user)
         {
             //1：先为该用户增加投票的次数
             //先从记录中取出已有的投票次数

@@ -8,11 +8,11 @@
 
 namespace CoreConsoleApp.设计模式.State状态模式.UsePattern
 {
-    public class Client
+    public static class Client
     {
         public static void Index()
         {
-            Context context = new Context(new VoteManager());
+            Context context = new(new VoteManager());
             for (int i = 0; i < 8; i++)
             {
                 context.Vote("u1", "A");

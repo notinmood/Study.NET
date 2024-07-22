@@ -25,7 +25,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
             //恶意投票完成，维护下一个状态，投票到8次，就进黑名单了
             //注意这里是判断大于等于7，因为这里设置的是下一个状态
             //下一个操作次数就是8了，就应该算是进黑名单了
-            if (voteManager.getCountVoteed(user) >= 7)
+            if (voteManager.GetCountVoteed(user) >= 7)
             {
                 voteManager.MapState[user] = new BlackVoteState();
             }

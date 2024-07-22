@@ -15,11 +15,11 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
         /**
          * 请假人
          */
-        private String user;
+        private string user;
         /**
          * 请假开始时间
          */
-        private String beginDate;
+        private string beginDate;
         /**
          * 请假天数
          */
@@ -27,37 +27,37 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
         /**
          * 审核结果
          */
-        private String result;
+        private string result;
 
-        public String getResult()
+        public string GetResult()
         {
             return result;
         }
-        public void setResult(String result)
+        public void SetResult(string result)
         {
             this.result = result;
         }
-        public String getUser()
+        public string GetUser()
         {
             return user;
         }
-        public String getBeginDate()
+        public string GetBeginDate()
         {
             return beginDate;
         }
-        public int getLeaveDays()
+        public int GetLeaveDays()
         {
             return leaveDays;
         }
-        public void setUser(String user)
+        public void setUser(string user)
         {
             this.user = user;
         }
-        public void setBeginDate(String beginDate)
+        public void SetBeginDate(string beginDate)
         {
             this.beginDate = beginDate;
         }
-        public void setLeaveDays(int leaveDays)
+        public void SetLeaveDays(int leaveDays)
         {
             this.leaveDays = leaveDays;
         }

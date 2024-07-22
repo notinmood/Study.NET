@@ -32,7 +32,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePattern
         {
             //1：先为该用户增加投票的次数
             //先从记录中取出已有的投票次数
-            int oldVoteCount = vm.getCountVoteed(user);
+            int oldVoteCount = vm.GetCountVoteed(user);
 
             oldVoteCount = oldVoteCount + 1;
             vm.MapVoteCount[user] = oldVoteCount;

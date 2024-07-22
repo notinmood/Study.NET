@@ -18,13 +18,13 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
      */
     public class DepManagerState : ILeaveRequestState
     {
-        public void doWork(StateMachine request)
+        public void DoWork(StateMachine request)
         {
             //先把业务对象造型回来
-            LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
+            LeaveRequestModel lrm = (LeaveRequestModel)request.GetBusinessVO();
             Console.WriteLine("部门经理审核中，请稍候......");
             //模拟用户处理界面，通过控制台来读取数据
-            Console.WriteLine(lrm.getUser() + "申请从" + lrm.getBeginDate() + "开始请假" + lrm.getLeaveDays() + "天,请部门经理审核(1为同意，2为不同意)：");
+            Console.WriteLine(lrm.GetUser() + "申请从" + lrm.GetBeginDate() + "开始请假" + lrm.GetLeaveDays() + "天,请部门经理审核(1为同意，2为不同意)：");
             //读取从控制台输入的数据
             string userInput = Console.ReadLine();
 
@@ -35,11 +35,11 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
                 result = "同意";
             }
 
-            lrm.setResult("部门经理审核结果：" + result);
+            lrm.SetResult("部门经理审核结果：" + result);
             //部门经理审核过后，直接转向审核结束状态了
-            request.setState(new AuditOverState());
+            request.SetState(new AuditOverState());
             //继续执行下一步工作
-            request.doWork();
+            request.DoWork();
         }
     }
 }

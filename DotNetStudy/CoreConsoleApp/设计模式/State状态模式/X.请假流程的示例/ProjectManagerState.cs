@@ -17,13 +17,13 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
      */
     public class ProjectManagerState : ILeaveRequestState
     {
-        public void doWork(StateMachine request)
+        public void DoWork(StateMachine ctx)
         {
             //先把业务对象造型回来
-            LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
+            LeaveRequestModel lrm = (LeaveRequestModel)ctx.GetBusinessVO();
             Console.WriteLine("项目经理审核中，请稍候......");
             //模拟用户处理界面，通过控制台来读取数据
-            Console.WriteLine(lrm.getUser() + "申请从" + lrm.getBeginDate() + "开始请假" + lrm.getLeaveDays() + "天,请项目经理审核(1为同意，2为不同意)：");
+            Console.WriteLine(lrm.GetUser() + "申请从" + lrm.GetBeginDate() + "开始请假" + lrm.GetLeaveDays() + "天,请项目经理审核(1为同意，2为不同意)：");
             //读取从控制台输入的数据
             string userInput = Console.ReadLine();
 
@@ -32,34 +32,34 @@ namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
             {
                 result = "同意";
             }
-            lrm.setResult("项目经理审核结果：" + result);
+            lrm.SetResult("项目经理审核结果：" + result);
 
             //根据选择的结果和条件来设置下一步
             if (userInput == "1")
             {
-                if (lrm.getLeaveDays() > 3)
+                if (lrm.GetLeaveDays() > 3)
                 {
                     //如果请假天数大于3天，而且项目经理同意了，
                     //就提交给部门经理
-                    request.setState(new DepManagerState());
+                    ctx.SetState(new DepManagerState());
                     //继续执行下一步工作
-                    request.doWork();
+                    ctx.DoWork();
                 }
                 else
                 {
                     //3天以内的请假，由项目经理做主,就不用提交给部门经理了，
                     //转向审核结束状态
-                    request.setState(new AuditOverState());
+                    ctx.SetState(new AuditOverState());
                     //继续执行下一步工作
-                    request.doWork();
+                    ctx.DoWork();
                 }
             }
             else
             {
                 //项目经理不同意，就不用提交给部门经理了，转向审核结束状态
-                request.setState(new AuditOverState());
+                ctx.SetState(new AuditOverState());
                 //继续执行下一步工作
-                request.doWork();
+                ctx.DoWork();
             }
 
         }

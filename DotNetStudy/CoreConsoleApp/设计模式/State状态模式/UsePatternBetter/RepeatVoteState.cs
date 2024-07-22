@@ -21,7 +21,7 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
             //重复投票完成，维护下一个状态，重复投票到5次，就算恶意投票了
             //注意这里是判断大于等于4，因为这里设置的是下一个状态
             //下一个操作次数就是5了，就应该算是恶意投票了
-            if (voteManager.getCountVoteed(user) >= 4)
+            if (voteManager.GetCountVoteed(user) >= 4)
             {
                 voteManager.MapState[user] = new SpiteVoteState();
             }
