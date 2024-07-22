@@ -8,12 +8,25 @@
 
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using CoreConsoleApp.Linq使用研究.Biz;
 
 namespace CoreConsoleApp.Linq使用研究
 {
-    internal class Clinet
+    internal static class Clinet
     {
+        public static void Index() {
+            //Select投影();
+            //Where过滤();
+            //SelectMany投影();
+            //OrderBy排序();
+            //OrderByDescending排序();
+            //ThenBy排序();
+            //ThenByDescending排序();
+            //Reverse逆转排序();
+            Join连接();
+        }
+
         public static void Select投影()
         {
             Console.WriteLine("》》》以下为 Select投影 信息：");
@@ -114,7 +127,6 @@ namespace CoreConsoleApp.Linq使用研究
                 Console.WriteLine(item);
             }
         }
-
 
         public static void Join连接()
         {

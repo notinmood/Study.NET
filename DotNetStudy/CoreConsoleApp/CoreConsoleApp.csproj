@@ -10,8 +10,4 @@
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.6" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="配置文件中自定义内容\嵌套的符合节点\" />
-  </ItemGroup>
 </Project>
