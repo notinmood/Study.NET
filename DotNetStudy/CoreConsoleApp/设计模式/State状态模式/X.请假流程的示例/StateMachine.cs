@@ -6,14 +6,12 @@
  * @company: HiLand & RainyTop
  */
 
-using System;
-
 namespace CoreConsoleApp.设计模式.State状态模式.X.请假流程的示例
 {
     /**
- * 公共状态处理机，相当于状态模式的Context
- * 包含所有流程使用状态模式时的公共功能
- */
+     * 公共状态处理机，相当于状态模式的Context
+     * 包含所有流程使用状态模式时的公共功能
+     */
     public class StateMachine
     {
         /**
