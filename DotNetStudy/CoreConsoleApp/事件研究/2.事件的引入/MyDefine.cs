@@ -6,6 +6,7 @@
  * @company: HiLand & RainyTop
  */
 
+#pragma warning disable
 namespace CoreConsoleApp.事件研究._2.事件的引入
 {
     public class MyDefine

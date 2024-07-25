@@ -29,8 +29,19 @@ namespace CoreConsoleApp.Linq使用研究
             //ThenByDescending排序();
             //Reverse逆转排序();
             //Join连接();
+            //GroupBy分组();
             //GroupJoin分组连接();
-            GroupBy分组();
+            //Concat连接();
+            //Aggregate聚合();
+            //Average平均值();
+            //Count计数();
+            //Max最大值();
+            //Min最小值();
+            //Sum求和();
+            //Distinct去重();
+            //Union并集();
+            //Intersect交集();
+            Except排除();
         }
 
         public static void Select投影()
@@ -197,19 +208,152 @@ namespace CoreConsoleApp.Linq使用研究
 
         public static void GroupJoin分组连接()
         {
-            var enumerable = Schools.GroupJoin(Students, o => o.SchoolId, i => i.SchoolId, (o, ii) => new { SchoolName = o.SchoolName, StudentName = ii.Select(i => i.Name) });
+            var enumerable = Schools.GroupJoin(Students, o => o.SchoolId, i => i.SchoolId, (o, ii) => new { o.SchoolName, StudentNames = ii.Select(i => i.Name) });
             foreach (var item in enumerable)
             {
                 Console.WriteLine(item.SchoolName);
                 Console.WriteLine("──────────────────");
-                foreach (var sn in item.StudentName)
+                foreach (var sn in item.StudentNames)
                 {
                     Console.WriteLine("\t" + sn);
                 }
                 Console.WriteLine();
             }
+            //--output---
+
         }
 
+        public static void Concat连接()
+        {
+            var result = Students.Select(s => s.Name).Concat(Schools.Select(s => s.SchoolName));
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //--output---
+            //Li Lei
+            //Han Meimei
+            //Li Ming
+            //Zou Qi
+            //Wang Long
+            //BeiJing Middle School
+            //ShangHai Middle School
+            //GuangZhou Middle School
+        }
 
+        public static void Aggregate聚合()
+        {
+            var result = Students.Select(s => s.Name).Aggregate((x, next) => $"{x}，{next}");
+            Console.WriteLine(result);
+            //--output---
+            //Li Lei，Han Meimei，Li Ming，Zou Qi，Wang Long
+        }
+
+        public static void Average平均值()
+        {
+            var result = Students.Average(s => s.Age);
+            Console.WriteLine(result);
+            //--output---
+            //7.6
+        }
+
+        public static void Count计数()
+        {
+            //使用泛型方法Count()，可以加入过滤条件
+            var result = Students.Count(s => s.Age > 7);
+            Console.WriteLine(result);
+            //--output---
+            //2
+
+            //使用属性Count，只能获取全部数据
+            result = Students.Count;
+            Console.WriteLine(result);
+            //--output---
+            //5
+        }
+
+        public static void Max最大值()
+        {
+            var result = Students.Max(s => s.Age);
+            Console.WriteLine(result);
+
+            //--output---
+            //9
+        }
+
+        public static void Min最小值()
+        {
+            var result = Students.Min(s => s.Age);
+            Console.WriteLine(result);
+
+            //--output---
+            //6
+        }
+
+        public static void Sum求和()
+        {
+            var result = Students.Sum(s => s.Age);
+            Console.WriteLine(result);
+
+            //--output---
+            //38
+        }
+
+        public static void Distinct去重()
+        {
+            var result = Students.Select(s => s.Age).Distinct();
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+            //--output---
+            //9
+            //6
+            //7
+        }
+
+        public static void Union并集()
+        {
+            var result = Students.Select(s => s.StuId).Union(Schools.Select(s => s.SchoolId));
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+            //--output---
+            //1
+            //2
+            //3
+            //4
+            //5
+            //8
+        }
+
+        public static void Intersect交集()
+        {
+            var result = Students.Select(s => s.StuId).Intersect(Schools.Select(s => s.SchoolId));
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //--output---
+            //1
+            //2
+        }
+
+        public static void Except排除()
+        {
+            var result = Students.Select(s => s.StuId).Except(Schools.Select(s => s.SchoolId));
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //--output---
+            //3
+            //4
+            //5
+        }
     }
 }

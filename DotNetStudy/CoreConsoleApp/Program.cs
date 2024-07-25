@@ -73,7 +73,8 @@ namespace CoreConsoleApp
             //设计模式.TemplateMethod模板方法模式.UsePattern.Client.Index();
 
             ////14. 中介者模式
-            设计模式.Mediator中介者模式.X.部门人员关系的处理.Client.Index();
+            //设计模式.Mediator中介者模式.X.部门人员关系的处理.Client.Index();
+            //设计模式.Mediator中介者模式.X.房屋中介的例子.Client.Index();
 
             //// 20. 调用自定义配置节点的逻辑
             //配置文件中自定义内容.最简方式.Client.Index();
@@ -84,7 +85,7 @@ namespace CoreConsoleApp
             //扩展方法研究.Client.Index();
 
             ////22. Linq使用研究的逻辑
-            //Linq使用研究.Clinet.Index();
+            Linq使用研究.Clinet.Index();
         }
     }
 }
