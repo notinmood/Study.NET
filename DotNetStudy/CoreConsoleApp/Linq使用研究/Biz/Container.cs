@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace CoreConsoleApp.Linq使用研究.Biz
 {
-    internal class Container
+    internal static class Container
     {
         static Container()
         {
@@ -25,8 +25,8 @@ namespace CoreConsoleApp.Linq使用研究.Biz
             students.Add(new Student() { StuId = 5, Name = "Wang Long", Age = 7, Class = "Grade One", SchoolId = 1 });
         }
 
-        static IList<School> schools = new List<School>();
-        static IList<Student> students = new List<Student>();
+        static readonly IList<School> schools = new List<School>();
+        static readonly IList<Student> students = new List<Student>();
 
         public static IList<School> Schools { get { return schools; } }
         public static IList<Student> Students { get { return students; } }

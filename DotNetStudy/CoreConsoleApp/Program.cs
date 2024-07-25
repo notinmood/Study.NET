@@ -72,12 +72,13 @@ namespace CoreConsoleApp
             //设计模式.TemplateMethod模板方法模式.NoPattern.Client.Index();
             //设计模式.TemplateMethod模板方法模式.UsePattern.Client.Index();
 
-
+            ////14. 中介者模式
+            设计模式.Mediator中介者模式.X.部门人员关系的处理.Client.Index();
 
             //// 20. 调用自定义配置节点的逻辑
             //配置文件中自定义内容.最简方式.Client.Index();
             //配置文件中自定义内容.嵌套的复合节点.Client.Index();
-            配置文件中自定义内容.带分组的Section.Clinet.Index();
+            //配置文件中自定义内容.带分组的Section.Clinet.Index();
 
             ////21. 扩展方法研究的逻辑
             //扩展方法研究.Client.Index();

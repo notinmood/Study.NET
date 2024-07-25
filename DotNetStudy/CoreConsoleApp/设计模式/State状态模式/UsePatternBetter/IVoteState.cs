@@ -6,8 +6,6 @@
  * @company: HiLand & RainyTop
  */
 
-using System;
-
 namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
 {
     /**

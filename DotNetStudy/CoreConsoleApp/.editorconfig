@@ -48,3 +48,6 @@ dotnet_diagnostic.S4487.severity = silent
 
 # IDE0052: 删除未读的私有成员
 dotnet_diagnostic.IDE0052.severity = silent
+
+# IDE0290: 使用主构造函数
+dotnet_diagnostic.IDE0290.severity = silent

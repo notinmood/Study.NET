@@ -21,14 +21,17 @@ namespace CoreConsoleApp.设计模式.State状态模式.UsePatternBetter
          * Map<String,VoteState>对应Map<用户名称,当前对应的状态处理对象>
          */
         private readonly Dictionary<string, IVoteState> mapState = [];
+        
         /**
          * 记录用户投票的结果,Map<String,String>对应Map<用户名称,投票的选项>
          */
         private readonly Dictionary<string, string> mapVote = [];
+        
         /**
          * 记录用户投票次数,Map<String,Integer>对应Map<用户名称,投票的次数>
          */
         private readonly Dictionary<string, int> mapVoteCount = [];
+        
         /**
          * 获取记录用户投票结果的Map
          * @return 记录用户投票结果的Map
