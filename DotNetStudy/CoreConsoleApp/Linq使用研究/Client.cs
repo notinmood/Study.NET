@@ -22,7 +22,7 @@ namespace CoreConsoleApp.Linq使用研究
         {
             //Select投影();
             //Where过滤();
-            //SelectMany投影();
+            SelectMany投影();
             //OrderBy排序();
             //OrderByDescending排序();
             //ThenBy排序();
@@ -41,7 +41,7 @@ namespace CoreConsoleApp.Linq使用研究
             //Distinct去重();
             //Union并集();
             //Intersect交集();
-            Except排除();
+            //Except排除();
         }
 
         public static void Select投影()
@@ -95,6 +95,20 @@ namespace CoreConsoleApp.Linq使用研究
             {
                 Console.WriteLine(s);
             }
+            //--output---
+            //Li
+            //Lei
+            //Han
+            //Meimei
+            //Li
+            //Ming
+            //Zou
+            //Qi
+            //Wang
+            //Long
+
+            //更多SelectMany的使用
+            SelectManyStudy.Index();
         }
 
         public static void OrderBy排序()
@@ -173,7 +187,6 @@ namespace CoreConsoleApp.Linq使用研究
             }
         }
 
-
         public static void GroupBy分组()
         {
             //方式1. 方法语法
@@ -204,7 +217,6 @@ namespace CoreConsoleApp.Linq使用研究
 
             //其他说明：group子句后面的表达式具有select一样的能力（可以对元素进行投影）
         }
-
 
         public static void GroupJoin分组连接()
         {
@@ -243,10 +255,10 @@ namespace CoreConsoleApp.Linq使用研究
 
         public static void Aggregate聚合()
         {
-            var result = Students.Select(s => s.Name).Aggregate((x, next) => $"{x}，{next}");
+            var result = Students.Select(s => s.Name).Aggregate("拼合后的字符串：", (acc, next) => $"{acc}，{next}");
             Console.WriteLine(result);
             //--output---
-            //Li Lei，Han Meimei，Li Ming，Zou Qi，Wang Long
+            //拼合后的字符串：，Li Lei，Han Meimei，Li Ming，Zou Qi，Wang Long
         }
 
         public static void Average平均值()
