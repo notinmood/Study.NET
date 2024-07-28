@@ -16,6 +16,6 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.UsePattern
          * 创建主板的对象 
          * @return 主板的对象 
          */
-        public IMainboard createMainboardApi();
+        public IMainBoard createMainboardApi();
     }
 }

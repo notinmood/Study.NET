@@ -5,7 +5,7 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.Biz
     /** 
    * 技嘉的主板 
    */
-    public class GAMainboard : IMainboard
+    public class GaMainBoard : IMainBoard
     {
         /** 
          * CPU插槽的孔数 
@@ -15,7 +15,7 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.Biz
          * 构造方法，传入CPU插槽的孔数 
          * @param cpuHoles CPU插槽的孔数 
          */
-        public GAMainboard(int cpuHoles)
+        public GaMainBoard(int cpuHoles)
         {
             this.cpuHoles = cpuHoles;
         }

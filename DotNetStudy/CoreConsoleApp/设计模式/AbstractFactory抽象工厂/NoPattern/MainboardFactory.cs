@@ -12,19 +12,19 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.NoPattern
          * @param type 选择主板类型的参数 
          * @return 主板接口对象的方法 
          */
-        public static IMainboard createMainboardApi(int type)
+        public static IMainBoard createMainboardApi(int type)
         {
-            IMainboard mainboard = null;
+            IMainBoard mainBoard = null;
             //根据参数来选择并创建相应的主板对象  
             if (type == 1)
             {
-                mainboard = new GAMainboard(1156);
+                mainBoard = new GaMainBoard(1156);
             }
             else if (type == 2)
             {
-                mainboard = new MSIMainboard(939);
+                mainBoard = new MsiMainBoard(939);
             }
-            return mainboard;
+            return mainBoard;
         }
     }
 

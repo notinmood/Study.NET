@@ -47,10 +47,13 @@ namespace CoreConsoleApp.Linq使用研究
         {
             与Select的比较();
             Product();
+            MultiProduct();
         }
 
         private static void 与Select的比较()
         {
+            //参考资料：https://piratewang.blog.csdn.net/article/details/139773872
+
             //数据初始化
             List<Device> list = new List<Device>();
 
@@ -67,9 +70,6 @@ namespace CoreConsoleApp.Linq使用研究
             list[3].Points.Add(new Point { PointId = "104-3", Name = "测试3", Value = 40 });
             list[3].Points.Add(new Point { PointId = "104-4", Name = "测试4", Value = 40 });
 
-
-
-
             var pointsOfSelect = list.Select(s => s.Points);
             Console.WriteLine(pointsOfSelect);//返回一个二维数组
             foreach (var outer in pointsOfSelect)
@@ -81,6 +81,7 @@ namespace CoreConsoleApp.Linq使用研究
                     Console.WriteLine("  " + inner.Name + ":" + inner.Value);
                 }
             }
+
             Console.WriteLine("──────────────────");
             var pointsOfSelectMany = list.SelectMany(x => x.Points);
             Console.WriteLine(pointsOfSelectMany);//返回一个扁平后的一维数组
@@ -99,7 +100,7 @@ namespace CoreConsoleApp.Linq使用研究
             List<string> set2 = ["a", "b", "c"];
 
             var cartesianProduct = set1.SelectMany(
-                x => set2,
+                s => set2,
                 (x1, x2) => new { X1 = x1, X2 = x2 }
             );
 
@@ -119,5 +120,29 @@ namespace CoreConsoleApp.Linq使用研究
             //(3, c)
         }
 
+
+        /// <summary>
+        /// 求笛卡尔积
+        /// </summary>
+        public static void MultiProduct()
+        {
+            List<string[]> list = new List<string[]>();
+            string[] s1 = { "A", "B", "C" };
+            string[] s2 = { "1", "2" };
+            string[] s3 = { "X", "Y" };
+            list.Add(s1);
+            list.Add(s2);
+            list.Add(s3);
+
+            var result = list.Aggregate((acc, next) => acc.SelectMany(x => next.Select(y => x + y)).ToArray());
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //Console.ReadKey();
+
+
+            //list.Aggregate()
+        }
     }
 }

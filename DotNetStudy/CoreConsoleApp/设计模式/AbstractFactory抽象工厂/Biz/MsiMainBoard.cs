@@ -5,7 +5,7 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.Biz
     /** 
    * 微星的主板 
    */
-    public class MSIMainboard : IMainboard
+    public class MsiMainBoard : IMainBoard
     {
         /** 
          * CPU插槽的孔数 
@@ -16,7 +16,7 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.Biz
          * 构造方法，传入CPU插槽的孔数 
          * @param cpuHoles CPU插槽的孔数 
          */
-        public MSIMainboard(int cpuHoles)
+        public MsiMainBoard(int cpuHoles)
         {
             this.cpuHoles = cpuHoles;
         }

@@ -51,3 +51,12 @@ dotnet_diagnostic.IDE0052.severity = silent
 
 # IDE0290: 使用主构造函数
 dotnet_diagnostic.IDE0290.severity = silent
+
+# IDE0003: 删除限定
+dotnet_diagnostic.IDE0003.severity = silent
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = silent
+
+# IDE0003: 删除限定
+dotnet_style_qualification_for_property = false

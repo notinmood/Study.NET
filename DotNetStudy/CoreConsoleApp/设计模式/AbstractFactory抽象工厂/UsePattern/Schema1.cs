@@ -14,9 +14,9 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.UsePattern
         {
             return new IntelCPU(1156);
         }
-        public IMainboard createMainboardApi()
+        public IMainBoard createMainboardApi()
         {
-            return new GAMainboard(1156);
+            return new GaMainBoard(1156);
         }
     }
 }

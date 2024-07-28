@@ -11,9 +11,10 @@ namespace CoreConsoleApp.设计模式.Strategy策略模式.UsePattern
     internal class PriceContext
     {
         /**
-     * 持有一个具体的策略对象
-     */
+         * 持有一个具体的策略对象
+         */
         private readonly IStrategy strategy = null;
+
         /**
          * 构造方法，传入一个具体的策略对象
          * @param aStrategy 具体的策略对象
@@ -22,6 +23,7 @@ namespace CoreConsoleApp.设计模式.Strategy策略模式.UsePattern
         {
             this.strategy = strategy;
         }
+
         /**
          * 报价，计算对客户的报价
          * @param goodsPrice 商品销售原价

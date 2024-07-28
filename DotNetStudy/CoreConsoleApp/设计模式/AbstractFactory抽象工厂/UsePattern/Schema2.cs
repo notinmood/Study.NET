@@ -8,9 +8,9 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.UsePattern
         {
             return new AMDCPU(939);
         }
-        public IMainboard createMainboardApi()
+        public IMainBoard createMainboardApi()
         {
-            return new MSIMainboard(939);
+            return new MsiMainBoard(939);
         }
     }
 }

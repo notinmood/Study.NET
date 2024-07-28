@@ -14,7 +14,7 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.NoPattern
         /** 
          * 定义组装机器需要的主板 
          */
-        private IMainboard mainboard = null;
+        private IMainBoard mainBoard = null;
         /** 
          * 装机过程 
          * @param cpuType 客户选择所需CPU的类型 
@@ -40,10 +40,10 @@ namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.NoPattern
 
             //直接找相应的工厂获取  
             this.cpu = CPUFactory.createCPUApi(cpuType);
-            this.mainboard = MainboardFactory.createMainboardApi(mainboardType);
+            this.mainBoard = MainboardFactory.createMainboardApi(mainboardType);
             //测试一下配件是否好用  
             this.cpu.calculate();
-            this.mainboard.installCPU();
+            this.mainBoard.installCPU();
         }
     }
 }

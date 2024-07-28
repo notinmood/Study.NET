@@ -5,20 +5,21 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CoreConsoleApp.设计模式.Proxy代理模式.Biz
 {
     /**
   * 描述用户数据的对象
   */
-    public class UserModel
+    public class UserModel : IUserModel
     {
+        public UserModel(string userId, string userName, string depId, string sex)
+        {
+            name = userName;
+            this.userId = userId;
+            this.depId = depId;
+            this.sex = sex;
+        }
+
         /**
          * 用户编号
          */
@@ -35,6 +36,16 @@ namespace CoreConsoleApp.设计模式.Proxy代理模式.Biz
          * 性别
          */
         private string sex;
+
+        /**
+         * 部门名称
+         */
+        private string depName;
+
+        /**
+         * 部门描述
+         */
+        private string depDesc;
 
         public string GetUserId()
         {
@@ -68,9 +79,30 @@ namespace CoreConsoleApp.设计模式.Proxy代理模式.Biz
         {
             this.sex = sex;
         }
+
+        public string GetDepName()
+        {
+            return depName;
+        }
+
+        public void SetDepName(string depName)
+        {
+            this.depName = depName;
+        }
+
+        public string GetDepDesc()
+        {
+            return depDesc;
+        }
+
+        public void SetDepDesc(string depDesc)
+        {
+            this.depDesc = depDesc;
+        }
+
         public override string ToString()
         {
-            return "userId=" + userId + ",name=" + name + ",depId=" + depId + ",sex=" + sex + "\n";
+            return "userId=" + userId + ",name=" + name + ",depId=" + depId + ",sex=" + sex;
         }
     }
 

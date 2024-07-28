@@ -22,7 +22,7 @@ namespace CoreConsoleApp.Linq使用研究
         {
             //Select投影();
             //Where过滤();
-            SelectMany投影();
+            //SelectMany投影();
             //OrderBy排序();
             //OrderByDescending排序();
             //ThenBy排序();
@@ -42,6 +42,11 @@ namespace CoreConsoleApp.Linq使用研究
             //Union并集();
             //Intersect交集();
             //Except排除();
+            //Empty静态空对象();
+            //Range静态取范围();
+            //Repeat静态重复();
+            Zip缝合();
+            
         }
 
         public static void Select投影()
@@ -286,11 +291,18 @@ namespace CoreConsoleApp.Linq使用研究
 
         public static void Max最大值()
         {
+            //返回的是最大值
             var result = Students.Max(s => s.Age);
             Console.WriteLine(result);
 
             //--output---
             //9
+
+            //返回的是最大值对应的元素
+            var rs = Students.MaxBy(s => s.Age);
+            Console.WriteLine(rs);
+            //--output---
+            //姓名:Li Lei;学号:1;年龄:9;班级:Grade Three;学校编号:1.
         }
 
         public static void Min最小值()
@@ -366,6 +378,55 @@ namespace CoreConsoleApp.Linq使用研究
             //3
             //4
             //5
+        }
+
+        /// <summary>
+        /// 在某些情况下，函数可能会返回一个 IEnumerable 类型的对象，如果没有任何元素，就可以返回 IEnumerable.Empty 作为默认的空集合。
+        /// </summary>
+        public static void Empty静态空对象()
+        {
+            var result = Enumerable.Empty<Student>();
+            Console.WriteLine(result);
+            Console.WriteLine(result.Count());
+        }
+
+        public static void Range静态取范围()
+        {
+            var result = Enumerable.Range(5, 5);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //--output---
+            //5
+            //6
+            //7
+            //8
+            //9
+        }
+
+        public static void Repeat静态重复()
+        {
+            var result = Enumerable.Repeat("love", 3);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            //--output---
+            //love
+            //love
+            //love
+        }
+
+        public static void Zip缝合()
+        {
+            List<string> list1 = ["beijing", "shanghai", "guangzhou"];
+            List<string> list2 = ["zhangsan", "lisi", "wangwu", "zhaoliu"];
+            var result = list1.Zip(list2);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

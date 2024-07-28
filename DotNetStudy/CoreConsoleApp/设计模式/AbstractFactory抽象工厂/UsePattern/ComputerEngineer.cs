@@ -2,48 +2,48 @@
 
 namespace CoreConsoleApp.设计模式.AbstractFactory抽象工厂.UsePattern
 {
-    /** 
-   * 装机工程师的类 
+    /**
+   * 装机工程师的类
    */
     public class ComputerEngineer
     {
-        /** 
-         * 定义组装机器需要的CPU 
+        /**
+         * 定义组装机器需要的CPU
          */
         private ICPU cpu = null;
-        /** 
-         * 定义组装机器需要的主板 
+        /**
+         * 定义组装机器需要的主板
          */
-        private IMainboard mainboard = null;
+        private IMainBoard mainBoard = null;
 
-        /** 
-         * 装机过程 
-         * @param schema 客户选择的装机方案 
+        /**
+         * 装机过程
+         * @param schema 客户选择的装机方案
          */
         public void makeComputer(AbstractFactory schema)
         {
-            //1：首先准备好装机所需要的配件  
+            //1：首先准备好装机所需要的配件
             prepareHardwares(schema);
-            //2：组装机器       
-            //3：测试机器       
-            //4：交付客户  
+            //2：组装机器
+            //3：测试机器
+            //4：交付客户
         }
-        /** 
-         * 准备装机所需要的配件 
-         * @param schema 客户选择的装机方案 
+        /**
+         * 准备装机所需要的配件
+         * @param schema 客户选择的装机方案
          */
         private void prepareHardwares(AbstractFactory schema)
         {
-            //这里要去准备CPU和主板的具体实现，为了示例简单，这里只准备这两个  
-            //可是，装机工程师并不知道如何去创建，怎么办呢？  
+            //这里要去准备CPU和主板的具体实现，为了示例简单，这里只准备这两个
+            //可是，装机工程师并不知道如何去创建，怎么办呢？
 
-            //使用抽象工厂来获取相应的接口对象  
+            //使用抽象工厂来获取相应的接口对象
             this.cpu = schema.createCPUApi();
-            this.mainboard = schema.createMainboardApi();
+            this.mainBoard = schema.createMainboardApi();
 
-            //测试一下配件是否好用  
+            //测试一下配件是否好用
             this.cpu.calculate();
-            this.mainboard.installCPU();
+            this.mainBoard.installCPU();
         }
     }
 }
