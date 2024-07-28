@@ -1,19 +1,20 @@
-﻿
-
-using System;
-
-/**
+﻿/**
  * @file   : Using.cs
  * @date   : 2024/7/8 10:17:08
  * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
+
+using System;
+
+
 namespace CoreConsoleApp.Misc.代码片段实践
 {
-    internal class Using
+    internal static class Using导入的验证
     {
-        public void Index() {
+        public static void Index()
+        {
 
             // +--------------------------------------------------------------------------
             // |::说明·|
@@ -21,6 +22,8 @@ namespace CoreConsoleApp.Misc.代码片段实践
             //  而sqrt是在代码片段管理，里面自定义的代码片段。
             // +--------------------------------------------------------------------------
             double root = Math.Sqrt(9);
+
+            Console.WriteLine(root);
         }
     }
 }

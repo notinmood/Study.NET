@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace CoreConsoleApp.OnlyForTest
+﻿namespace CoreConsoleApp.OnlyForTest
 {
     public static class MyBiz
     {
@@ -11,7 +9,7 @@ namespace CoreConsoleApp.OnlyForTest
         /// <returns>返回三角形类型名称.</returns>
         public static string GetTriangle(int[] sideArr)
         {
-            if (sideArr.Count() < 3)
+            if (sideArr.Length < 3)
             {
                 return "不构成三角形";
             }
