@@ -21,7 +21,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
         private DepUserMediatorImpl()
         {
             //调用初始化测试数据的功能
-            initTestData();
+            InitTestData();
         }
         public static DepUserMediatorImpl getInstance()
         {
@@ -36,7 +36,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
         /**
          * 初始化测试数据
          */
-        private void initTestData()
+        private void InitTestData()
         {
             //准备一些测试数据
             DepUserModel du1 = new DepUserModel { DepUserId = "du1", DepId = "d1", UserId = "u1" };
@@ -59,7 +59,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * @param depId 被撤销的部门对象的编号
          * @return 是否已经正确的处理了因撤销部门所引起的与人员的交互
          */
-        public bool deleteDep(string depId)
+        public bool DeleteDep(string depId)
         {
             //请注意：为了演示简单，部门撤销后，
             //原部门的人员怎么处理等后续业务处理，这里就不管了
@@ -71,7 +71,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * @param userId 离职的人员的编号
          * @return 是否正确处理了因人员离职引起的与部门的交互
          */
-        public bool deleteUser(string userId)
+        public bool DeleteUser(string userId)
         {
             depUserCol.RemoveAll(x => x.UserId == userId);
             return true;
@@ -80,7 +80,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * 测试用，在内部打印显示一下一个部门下的所有人员
          * @param dep 部门对象
          */
-        public void showDepUsers(Dep dep)
+        public void ShowDepUsers(Dep dep)
         {
             foreach (DepUserModel du in depUserCol)
             {
@@ -94,7 +94,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * 测试用，在内部打印显示一下一个人员所属的部门
          * @param user 人员对象
          */
-        public void showUserDeps(User user)
+        public void ShowUserDeps(User user)
         {
             foreach (DepUserModel du in depUserCol)
             {
@@ -111,7 +111,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * @param newDepId 调换后的部门的编号
          * @return 是否正确处理了因人员调换部门引起的与部门的交互
          */
-        public bool changeDep(string userId, string oldDepId, string newDepId)
+        public bool ChangeDep(string userId, string oldDepId, string newDepId)
         {
             //本示例不去实现了
             return false;
@@ -122,7 +122,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
          * @param newDep 合并后新的部门对象
          * @return 是否正确处理了因部门合并操作所引起的与人员的交互
          */
-        public bool joinDep(List<String> colDepIds, Dep newDep)
+        public bool JoinDep(List<String> colDepIds, Dep newDep)
         {
             //本示例不去实现了     
             return false;

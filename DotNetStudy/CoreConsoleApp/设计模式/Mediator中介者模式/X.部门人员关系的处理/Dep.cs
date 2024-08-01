@@ -48,7 +48,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
         {
             //1：要先通过中介者去清除掉所有与这个部门相关的部门和人员的关系
             DepUserMediatorImpl mediator = DepUserMediatorImpl.getInstance();
-            mediator.deleteDep(depId);
+            mediator.DeleteDep(depId);
             //2：然后才能真的清除掉这个部门
             //请注意在实际开发中，这些业务功能可能会做到业务层去，
             //而且实际开发中对于已经使用的业务数据通常是不会被删除的，

@@ -46,7 +46,7 @@ namespace CoreConsoleApp.设计模式.Mediator中介者模式.X.部门人员关�
         {
             //1：要先通过中介者去清除掉所有与这个人员相关的部门和人员的关系
             DepUserMediatorImpl mediator = DepUserMediatorImpl.getInstance();
-            mediator.deleteUser(userId);
+            mediator.DeleteUser(userId);
             //2：然后才能真的清除掉这个人员
             //请注意，实际开发中，人员离职，是不会真的删除人员记录的，
             //通常是把人员记录的状态或者是删除标记设置成已删除，

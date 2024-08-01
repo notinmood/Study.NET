@@ -78,7 +78,11 @@ namespace CoreConsoleApp
 
             ////15. 代理模式
             //设计模式.Proxy代理模式.NoPattern.Client.Index();
-            设计模式.Proxy代理模式.UsePattern.Client.Index();
+            //设计模式.Proxy代理模式.UsePattern.Client.Index();
+
+            ////16. 访问者模式
+            //设计模式.Visitor访问者模式.NoPattern.Client.Index();
+
 
             //// 20. 调用自定义配置节点的逻辑
             //配置文件中自定义内容.最简方式.Client.Index();
@@ -90,6 +94,11 @@ namespace CoreConsoleApp
 
             ////22. Linq使用研究的逻辑
             //Linq使用研究.Clinet.Index();
+
+            ////23. 
+            类型分派.静态分派.Client.Index();
+            类型分派.动态分派.Client.Index();
+            类型分派.双方派.Client.Index();
         }
     }
 }
