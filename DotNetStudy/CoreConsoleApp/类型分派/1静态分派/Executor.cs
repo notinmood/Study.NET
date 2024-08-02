@@ -12,6 +12,11 @@ namespace CoreConsoleApp.类型分派.静态分派
 {
     public class Executor
     {
+        public void execute(IMove a)
+        {
+            Console.WriteLine("IMove...");
+        }
+
         public void execute(Animal a)
         {
             Console.WriteLine("animal");

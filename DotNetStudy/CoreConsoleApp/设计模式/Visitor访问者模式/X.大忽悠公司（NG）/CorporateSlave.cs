@@ -19,7 +19,7 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司NG
             this.name = name;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }

@@ -22,7 +22,7 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司
         {
             employees.Add(new Programmer("王二狗"));
             employees.Add(new HumanResource("上官无需"));
-            employees.Add(new Tester("牛翠花"));
+            employees.Add(new Sales("牛翠花"));
         }
 
         public void startProject(IVisitor visitor)

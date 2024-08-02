@@ -10,13 +10,13 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司NG
 {
     public interface IVisitor
     {
-        //为虚类CorporateSlave添加一个不会调用到的方法（仅仅为了编译通过）。
+        ////为虚类CorporateSlave添加一个不会调用到的方法（仅仅为了编译通过）。
         void Visit(CorporateSlave slave);
 
         void Visit(Programmer programmer);
 
         void Visit(HumanResource humanResource);
 
-        void Visit(Tester tester);
+        void Visit(Sales sales);
     }
 }

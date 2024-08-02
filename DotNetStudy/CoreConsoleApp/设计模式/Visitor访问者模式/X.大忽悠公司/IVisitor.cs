@@ -14,6 +14,6 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司
 
         void Visit(HumanResource humanResource);
 
-        void Visit(Tester tester);
+        void Visit(Sales sales);
     }
 }

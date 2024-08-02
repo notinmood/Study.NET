@@ -10,11 +10,11 @@ using System;
 
 namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司
 {
-    public class Tester : ICorporateSlave
+    public class Sales : ICorporateSlave
     {
         private readonly string name;
 
-        public Tester(string name)
+        public Sales(string name)
         {
             this.name = name;
         }

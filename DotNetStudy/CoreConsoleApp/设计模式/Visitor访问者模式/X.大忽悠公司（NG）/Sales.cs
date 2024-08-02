@@ -10,9 +10,9 @@ using System;
 
 namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司NG
 {
-    public class Tester : CorporateSlave
+    public class Sales : CorporateSlave
     {
-        public Tester(string name) : base(name)
+        public Sales(string name) : base(name)
         {
             // do nothing;
         }

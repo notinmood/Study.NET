@@ -12,7 +12,7 @@ using System;
 
 namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司NG
 {
-    internal class Client
+    public static class Client
     {
         public static void Index()
         {
@@ -22,7 +22,6 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司NG
             bigHuYou.startProject(new SocialAppVisitor());
             Console.WriteLine("-----------------启动短视频APP项目--------------------");
             bigHuYou.startProject(new LiveAppVisitor());
-
         }
     }
 }
