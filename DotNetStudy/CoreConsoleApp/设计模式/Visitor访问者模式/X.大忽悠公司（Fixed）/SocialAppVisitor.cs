@@ -1,0 +1,46 @@
+﻿/**
+ * @file   : SocialApp.cs
+ * @date   : 2024/8/2 11:18:18
+ * @mail   : 9727005@qq.com
+ * @creator: ShanDong Xiedali
+ * @company: HiLand & RainyTop
+ */
+
+using System;
+
+namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司Fixed
+{
+    public class SocialAppVisitor : IVisitor
+    {
+        public void Visit(ICorporateSlave slave)
+        {
+            Programmer programmer = slave as Programmer;
+            if (programmer != null)
+            {
+                Console.WriteLine($"{programmer.GetName()}: 给你一个月，先仿照微信搞个类似的APP出来,要能语音能发红包,将来公司上市了少不了你的，好好干...");
+            }
+
+            HumanResource humanResource = slave as HumanResource;
+            if (humanResource != null)
+            {
+                Console.WriteLine($"{humanResource.GetName()}: 咱现在缺人，你暂时就充当了陪聊吧，在程序员开发APP期间，你去发发软文，积攒点粉丝...");
+            }
+
+            Sales sales = slave as Sales;
+            if (sales != null)
+            {
+                Console.WriteLine($"{sales.GetName()}: 这是咱创业的第一炮，一定要打响，测试不能掉链子啊，不能让APP带伤上战场，以后给你多招点人，你就是领导了...");
+            }
+        }
+
+        //public void Visit(HumanResource humanResource)
+        //{
+        //    Console.WriteLine($"{humanResource.GetName()}: 咱现在缺人，你暂时就充当了陪聊吧，在程序员开发APP期间，你去发发软文，积攒点粉丝...");
+        //}
+
+        //public void Visit(Sales sales)
+        //{
+        //    Console.WriteLine($"{sales.GetName()}:  这是咱创业的第一炮，一定要打响，测试不能掉链子啊，不能让APP带伤上战场，以后给你多招点人，你就是领导了...");
+        //}
+    }
+}
