@@ -29,9 +29,6 @@ namespace CoreConsoleApp.类型关系研究.聚合关系
 
     public class Student
     {
-        //public Name _name;
-        //public Address _address;
-
         public Name Name { get; set; }
 
         public Address Address { get; set; }

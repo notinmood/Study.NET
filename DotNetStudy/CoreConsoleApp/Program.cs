@@ -82,9 +82,13 @@ namespace CoreConsoleApp
 
             ////16. 访问者模式
             //设计模式.Visitor访问者模式.NoPattern.Client.Index();
-            设计模式.Visitor访问者模式.X.大忽悠公司.Client.Index();
-            设计模式.Visitor访问者模式.X.大忽悠公司NG.Client.Index();
-            设计模式.Visitor访问者模式.X.大忽悠公司Fixed.Client.Index();
+            //设计模式.Visitor访问者模式.X.大忽悠公司.Client.Index();
+            //设计模式.Visitor访问者模式.X.大忽悠公司NG.Client.Index();
+            //设计模式.Visitor访问者模式.X.大忽悠公司Fixed.Client.Index();
+
+            ////17. 组合模式
+            设计模式.Composite组合模式.NoPattern.Client.Index();
+            设计模式.Composite组合模式.UsePattern.Client.Index();
 
 
             //// 20. 调用自定义配置节点的逻辑
