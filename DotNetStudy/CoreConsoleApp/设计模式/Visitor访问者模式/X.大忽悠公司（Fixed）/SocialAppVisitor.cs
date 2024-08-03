@@ -32,15 +32,5 @@ namespace CoreConsoleApp.设计模式.Visitor访问者模式.X.大忽悠公司Fi
                 Console.WriteLine($"{sales.GetName()}: 这是咱创业的第一炮，一定要打响，测试不能掉链子啊，不能让APP带伤上战场，以后给你多招点人，你就是领导了...");
             }
         }
-
-        //public void Visit(HumanResource humanResource)
-        //{
-        //    Console.WriteLine($"{humanResource.GetName()}: 咱现在缺人，你暂时就充当了陪聊吧，在程序员开发APP期间，你去发发软文，积攒点粉丝...");
-        //}
-
-        //public void Visit(Sales sales)
-        //{
-        //    Console.WriteLine($"{sales.GetName()}:  这是咱创业的第一炮，一定要打响，测试不能掉链子啊，不能让APP带伤上战场，以后给你多招点人，你就是领导了...");
-        //}
     }
 }
