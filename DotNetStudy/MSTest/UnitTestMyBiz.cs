@@ -1,4 +1,4 @@
-using CoreConsoleApp.OnlyForTest;
+using CoreConsoleApp.OnlyForUnitTest;
 
 namespace MSTest
 {

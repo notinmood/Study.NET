@@ -1,4 +1,4 @@
-﻿namespace CoreConsoleApp.OnlyForTest
+﻿namespace CoreConsoleApp.OnlyForUnitTest
 {
     public static class MyBiz
     {

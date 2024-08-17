@@ -32,7 +32,7 @@ namespace CoreConsoleApp.设计模式.Command命令模式.X.智能家具中遥�
             //需要一个遥控器
             RemoteController remoteController = new RemoteController();
 
-            //给我们的遥控器设置命令, 比如 no = 0 是电灯的开和关的操作
+            //给我们的遥控器设置命令, 比如 number = 0 是电灯的开和关的操作
             remoteController.setCommand(0, lightOnCommand, lightOffCommand);
 
             Console.WriteLine("--------按下灯的开按钮-----------");
@@ -50,7 +50,7 @@ namespace CoreConsoleApp.设计模式.Command命令模式.X.智能家具中遥�
             TVOffCommand tvOffCommand = new TVOffCommand(tvReceiver);
             TVOnCommand tvOnCommand = new TVOnCommand(tvReceiver);
 
-            //给我们的遥控器设置命令, 比如 no = 1 是电视机的开和关的操作
+            //给我们的遥控器设置命令, 比如 number = 1 是电视机的开和关的操作
             remoteController.setCommand(1, tvOnCommand, tvOffCommand);
 
             Console.WriteLine("--------按下电视机的开按钮-----------");

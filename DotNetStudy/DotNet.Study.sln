@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSTest", "MSTest\MSTest.csproj", "{91F63EB0-A204-4F54-9CC2-42996A6BF9C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp", "WinFormsApp\WinFormsApp.csproj", "{69344EAB-87B2-4B7B-853B-DA7FB14EDDBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{91F63EB0-A204-4F54-9CC2-42996A6BF9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91F63EB0-A204-4F54-9CC2-42996A6BF9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91F63EB0-A204-4F54-9CC2-42996A6BF9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69344EAB-87B2-4B7B-853B-DA7FB14EDDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69344EAB-87B2-4B7B-853B-DA7FB14EDDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69344EAB-87B2-4B7B-853B-DA7FB14EDDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69344EAB-87B2-4B7B-853B-DA7FB14EDDBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
