@@ -34,6 +34,8 @@
             backgroundWorker = new System.ComponentModel.BackgroundWorker();
             btnBGWorker = new Button();
             btnThreadPool = new Button();
+            btnTask = new Button();
+            btnAsync = new Button();
             SuspendLayout();
             // 
             // btnNormal
@@ -88,11 +90,33 @@
             btnThreadPool.UseVisualStyleBackColor = true;
             btnThreadPool.Click += BtnThreadPool_Click;
             // 
+            // btnTask
+            // 
+            btnTask.Location = new Point(377, 58);
+            btnTask.Name = "btnTask";
+            btnTask.Size = new Size(229, 23);
+            btnTask.TabIndex = 5;
+            btnTask.Text = "Task异步方法(UI不会被冻结)";
+            btnTask.UseVisualStyleBackColor = true;
+            btnTask.Click += BtnTask_Click;
+            // 
+            // btnAsync
+            // 
+            btnAsync.Location = new Point(377, 29);
+            btnAsync.Name = "btnAsync";
+            btnAsync.Size = new Size(229, 23);
+            btnAsync.TabIndex = 6;
+            btnAsync.Text = "Async/Await异步方法(UI不会被冻结)";
+            btnAsync.UseVisualStyleBackColor = true;
+            btnAsync.Click += BtnAsync_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAsync);
+            Controls.Add(btnTask);
             Controls.Add(btnThreadPool);
             Controls.Add(btnBGWorker);
             Controls.Add(btnThread);
@@ -112,5 +136,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private Button btnBGWorker;
         private Button btnThreadPool;
+        private Button btnTask;
+        private Button btnAsync;
     }
 }
