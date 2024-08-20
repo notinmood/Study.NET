@@ -2,6 +2,7 @@
 // 版权：山东润拓{currentYear}
 
 using System;
+using System.Diagnostics;
 
 #pragma warning disable
 namespace CoreConsoleApp
@@ -91,7 +92,7 @@ namespace CoreConsoleApp
             //设计模式.Composite组合模式.UsePattern.Client.Index();
 
             ////18. 适配器模式
-            设计模式.Adapter适配器.NoPattern.V1.UseFileLog.Client.Index();
+            //设计模式.Adapter适配器.NoPattern.V1.UseFileLog.Client.Index();
 
 
             //// 20. 调用自定义配置节点的逻辑
@@ -109,6 +110,10 @@ namespace CoreConsoleApp
             //类型分派.静态分派.Client.Index();
             //类型分派.动态分派.Client.Index();
             //类型分派.双方派.Client.Index();
+
+
+            //30. 异步和多线程研究
+            异步和多线程.Task的使用.创建Task的几种方法.Index();
         }
     }
 }
