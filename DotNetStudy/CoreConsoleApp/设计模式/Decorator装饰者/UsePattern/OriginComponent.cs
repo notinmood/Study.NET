@@ -21,5 +21,4 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
             return 0;
         }
     }
-
 }
