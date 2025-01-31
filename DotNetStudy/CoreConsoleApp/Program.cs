@@ -65,8 +65,8 @@ namespace CoreConsoleApp
             ////11. 调用Provider 模式
             //设计模式.Provider提供者模式.X.Sample.Client.Index();
 
-            ////12. 调用装饰器模式
-            //设计模式.Decorator装饰者.NoPattern.Client.Index();
+            //12. 调用装饰器模式
+            设计模式.Decorator装饰者.NoPattern.Client.Index();
             //设计模式.Decorator装饰者.UsePattern.Client.Index();
 
             ////13. 调用模板方法模式
@@ -112,8 +112,8 @@ namespace CoreConsoleApp
             //类型分派.双方派.Client.Index();
 
 
-            //30. 异步和多线程研究
-            异步和多线程.Task的使用.创建Task的几种方法.Index();
+            ////30. 异步和多线程研究
+            //异步和多线程.Task的使用.创建Task的几种方法.Index();
         }
     }
 }

@@ -25,9 +25,9 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
             //1：先获取前面运算出来的奖金  
             double money = c.CalcPrize(user, begin, end);
             //2：然后计算当月团队业务奖金，先计算出团队总的业务额，然后再乘以1%  
-            //假设都是一个团队的  
+            //假设系统中的所有人都是一个团队的。
             double group = 0.0;
-            foreach (double d in TempDB.mapMonthSaleMoney.Values)
+            foreach (double d in TempDB.MapMonthSaleMoney.Values)
             {
                 group += d;
             }

@@ -25,7 +25,7 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
             //1：先获取前面运算出来的奖金  
             double money = c.CalcPrize(user, begin, end);
             //2：然后计算当月业务奖金,按人员和时间去获取当月业务额，然后再乘以3%  
-            double prize = TempDB.mapMonthSaleMoney[user] * 0.03;
+            double prize = TempDB.MapMonthSaleMoney[user] * 0.03;
             Console.WriteLine(user + "当月业务奖金" + prize);
             return money + prize;
         }

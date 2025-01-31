@@ -22,7 +22,7 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.UsePattern
 
             //然后对计算的基本奖金进行装饰，这里要组合各个装饰  
             //说明，各个装饰者之间最好是不要有先后顺序的限制，  
-            //也就是先装饰谁和后装饰谁都应该是一样的  
+            //也就是先装饰谁和后装饰谁效果都应该是一样的  
 
             //先组合普通业务人员的奖金计算  
             Decorator d1 = new MonthPrizeDecorator(c1);

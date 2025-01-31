@@ -22,7 +22,12 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.Biz
         /** 
          * 记录每个人的月度销售额，只用了人员，月份没有用 
          */
-        public static Dictionary<String, Double> mapMonthSaleMoney = new Dictionary<String, Double>();
+        private static Dictionary<String, Double> mapMonthSaleMoney = new Dictionary<String, Double>();
+
+        public static Dictionary<String, Double> MapMonthSaleMoney
+        {
+            get { return mapMonthSaleMoney; }
+        }
 
         static TempDB()
         {

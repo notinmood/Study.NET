@@ -26,18 +26,18 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.NoPattern
          * @param end 计算奖金的结束时间 
          * @return 某人在某段时间内的奖金 
          */
-        public double calcPrize(string user, DateTime begin, DateTime end)
+        public static double CalcPrize(string user, DateTime begin, DateTime end)
         {
             double prize = 0.0;
             //计算当月业务奖金，所有人都会计算  
-            prize = this.monthPrize(user, begin, end);
+            prize = MonthPrize(user, begin, end);
             //计算累计奖金  
-            prize += this.sumPrize(user, begin, end);
+            prize += SumPrize(user, begin, end);
 
             //需要判断该人员是普通人员还是业务经理，团队奖金只有业务经理才有  
-            if (this.isManager(user))
+            if (IsManager(user))
             {
-                prize += this.groupPrize(user, begin, end);
+                prize += GroupPrize(user, begin, end);
             }
             return prize;
         }
@@ -45,10 +45,10 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.NoPattern
         /** 
          * 计算某人的当月业务奖金，参数重复，就不再注释了 
          */
-        private double monthPrize(string user, DateTime begin, DateTime end)
+        private static double MonthPrize(string user, DateTime begin, DateTime end)
         {
             //计算当月业务奖金,按照人员去获取当月的业务额，然后再乘以3%  
-            double prize = TempDB.mapMonthSaleMoney[user] * 0.03;
+            double prize = TempDB.MapMonthSaleMoney[user] * 0.03;
             Console.WriteLine(user + "当月业务奖金" + prize);
             return prize;
         }
@@ -56,7 +56,7 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.NoPattern
         /** 
          * 计算某人的累计奖金，参数重复，就不再注释了 
          */
-        public double sumPrize(string user, DateTime begin, DateTime end)
+        public static double SumPrize(string user, DateTime begin, DateTime end)
         {
             //计算累计奖金,其实应该按照人员去获取累计的业务额，然后再乘以0.1%  
             //简单演示一下，假定大家的累计业务额都是1000000元  
@@ -70,7 +70,7 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.NoPattern
          * @param user 被判断的人员 
          * @return true表示是业务经理,false表示是普通人员 
          */
-        private bool isManager(string user)
+        private static bool IsManager(string user)
         {
             //应该从数据库中获取人员对应的职务  
             //为了演示，简单点判断，只有王五是经理  
@@ -83,12 +83,12 @@ namespace CoreConsoleApp.设计模式.Decorator装饰者.NoPattern
         /** 
          * 计算当月团队业务奖，参数重复，就不再注释了 
          */
-        public double groupPrize(string user, DateTime begin, DateTime end)
+        public static double GroupPrize(string user, DateTime begin, DateTime end)
         {
             //计算当月团队业务奖金，先计算出团队总的业务额，然后再乘以1%，  
             //假设都是一个团队的  
             double group = 0.0;
-            foreach (double d in TempDB.mapMonthSaleMoney.Values)
+            foreach (double d in TempDB.MapMonthSaleMoney.Values)
             {
                 group += d;
             }
